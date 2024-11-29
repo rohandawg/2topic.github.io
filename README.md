@@ -1,12 +1,12 @@
 
 
-## AlgoGoogle
+## TECHTOPIA CITY PLAN
 
 <dl>
 <dt>Course Name</dt>
-<dd>Algorithmic Problem Solving</dd>
+<dd>Design and Analysis Algorithms</dd>
 <dt>Course Code</dt>
-<dd>23ECSE309</dd>
+<dd>24ECSC205</dd>
 <dt>Name</dt>
 <dd>Jiya Palrecha</dd>
 <dt>SRN</dt>
