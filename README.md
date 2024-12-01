@@ -67,6 +67,17 @@
         <li>Rohan Rathod (01FE23BCS176)</li>
     </ul>
 </section>
+<section>
+    <h2>Selected Business Models</h2>
+    <li>Rohan Rathod:1)wildlife managment sector 2)hospitality and service manangement 
+    </li>
+     <li>Vraj Joisar:1)industrial sector 2)trasportation and communication 
+    </li>
+     <li>Ayush Bhandari:1)education sector 2)technological sector 3)waste managment 
+    </li>
+     <li>Sudarshan K. Naik:1)healthcare sector 2)agricultural sector 3)marketing sector 
+    </li>
+</section>
 
 <h2>City Layout Plan</h2>
 <section class="layout-section">
