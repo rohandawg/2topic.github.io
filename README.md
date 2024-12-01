@@ -64,6 +64,40 @@
     </ul>
 </section>
 
+<h2>Business Model Focus Areas</h2>
+<table>
+    <caption>Business Models Selected by Team Members</caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>USN</th>
+            <th>Selected Business Models</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sudarshan K. Naik</td>
+            <td>01FE23BCS221</td>
+            <td>Agriculture, Marketing, Healthcare</td>
+        </tr>
+        <tr>
+            <td>Ayush Bhandari</td>
+            <td>01FE23BCS173</td>
+            <td>Education, Technology, Waste Management</td>
+        </tr>
+        <tr>
+            <td>Vraj Joisar</td>
+            <td>01FE23BCS242</td>
+            <td>Industry, Transportation and Communication</td>
+        </tr>
+        <tr>
+            <td>Rohan Rathod</td>
+            <td>01FE23BCS176</td>
+            <td>Hospitality and Service Management, Wildlife Management</td>
+        </tr>
+    </tbody>
+</table>
+
 <h2>City Layout Plan: Area Allocation</h2>
 <table>
     <caption>Area Allocation</caption>
@@ -124,141 +158,6 @@
             <td>Healthcare Sector</td>
             <td>50</td>
             <td>3.33%</td>
-        </tr>
-    </tbody>
-</table>
-
-<h2>Population Distribution</h2>
-<table>
-    <caption>Population Distribution</caption>
-    <thead>
-        <tr>
-            <th>Sector</th>
-            <th>Estimated Population</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Residential Area</td>
-            <td>1,200,000</td>
-        </tr>
-        <tr>
-            <td>Industrial Area</td>
-            <td>40,000</td>
-        </tr>
-        <tr>
-            <td>Education & Technology Hub</td>
-            <td>50,000</td>
-        </tr>
-        <tr>
-            <td>Healthcare Sector</td>
-            <td>5,000</td>
-        </tr>
-        <tr>
-            <td>Commercial District</td>
-            <td>415,000</td>
-        </tr>
-        <tr>
-            <td>Port Infrastructure</td>
-            <td>2,500</td>
-        </tr>
-        <tr>
-            <td>Tourism and Cultural Sites</td>
-            <td>5,000</td>
-        </tr>
-        <tr>
-            <td>Coastal Management</td>
-            <td>90,000</td>
-        </tr>
-        <tr>
-            <td>Agricultural Sector</td>
-            <td>5,000</td>
-        </tr>
-        <tr>
-            <td>Total Population</td>
-            <td>3,000,000</td>
-        </tr>
-    </tbody>
-</table>
-
-<h2>Budget Estimation</h2>
-<table>
-    <caption>Budget Estimation</caption>
-    <thead>
-        <tr>
-            <th>Sector</th>
-            <th>Budget (Crores)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Port Infrastructure</td>
-            <td>8,000</td>
-        </tr>
-        <tr>
-            <td>Residential Area</td>
-            <td>10,000</td>
-        </tr>
-        <tr>
-            <td>Healthcare Sector</td>
-            <td>1,000</td>
-        </tr>
-        <tr>
-            <td>Agricultural Sector</td>
-            <td>1,500</td>
-        </tr>
-        <tr>
-            <td>Transport Infrastructure</td>
-            <td>7,000</td>
-        </tr>
-        <tr>
-            <td>Commercial District</td>
-            <td>4,000</td>
-        </tr>
-        <tr>
-            <td>Industrial Area</td>
-            <td>3,500</td>
-        </tr>
-        <tr>
-            <td>Grand Total</td>
-            <td>84,500</td>
-        </tr>
-    </tbody>
-</table>
-
-<h2>Revenue Model</h2>
-<table>
-    <caption>Revenue Model</caption>
-    <thead>
-        <tr>
-            <th>Sector</th>
-            <th>Annual Revenue (Crores)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Residential Area</td>
-            <td>23,300</td>
-        </tr>
-        <tr>
-            <td>Healthcare Sector</td>
-            <td>9,000</td>
-        </tr>
-        <tr>
-            <td>Agricultural Sector</td>
-            <td>7,800</td>
-        </tr>
-        <tr>
-            <td>Education & Technology Hub</td>
-            <td>21,800</td>
-        </tr>
-        <tr>
-            <td>Other Sources</td>
-            <td>21,700</td>
-        </tr>
-        <tr>
-            <td>Total Revenue</td>
-            <td>83,600</td>
         </tr>
     </tbody>
 </table>
