@@ -26,11 +26,43 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
+        .info-section, .team-section {
+            margin: 20px 0;
+        }
+        .info-section dl, .team-section ul {
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
 
 <h1>TECHTOPIA CITY PLAN</h1>
+
+<section class="info-section">
+    <h2>Project Information</h2>
+    <dl>
+        <dt>Course Name:</dt>
+        <dd>Design and Analysis of Algorithms</dd>
+        <dt>Course Code:</dt>
+        <dd>24ECSC205</dd>
+        <dt>Course Instructor:</dt>
+        <dd>Prakash Hegde</dd>
+        <dt>University:</dt>
+        <dd>KLE Technological University, Hubballi-31</dd>
+        <dt>Portfolio Topic/Domain:</dt>
+        <dd>City Planning and Development</dd>
+    </dl>
+</section>
+
+<section class="team-section">
+    <h2>Team Members</h2>
+    <ul>
+        <li>Sudarshan K. Naik (01FE23BCS221)</li>
+        <li>Ayush Bhandari (01FE23BCS173)</li>
+        <li>Vraj Joisar (01FE23BCS242)</li>
+        <li>Rohan Rathod (01FE23BCS176)</li>
+    </ul>
+</section>
 
 <h2>City Layout Plan: Area Allocation</h2>
 <table>
