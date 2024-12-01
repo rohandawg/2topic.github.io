@@ -50,7 +50,7 @@
         <dt>Course Code:</dt>
         <dd>24ECSC205</dd>
         <dt>Course Instructor:</dt>
-        <dd>Prakash Hegde</dd>
+        <dd>Prakash Hegade</dd>
         <dt>University:</dt>
         <dd>KLE Technological University, Hubballi-31</dd>
         <dt>Portfolio Topic/Domain:</dt>
