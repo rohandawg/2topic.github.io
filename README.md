@@ -26,13 +26,18 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
-        .info-section, .team-section {
+        .info-section, .team-section, .layout-section, .chart-section {
             margin: 20px 0;
         }
         .info-section dl, .team-section ul {
             margin: 10px 0;
         }
+        canvas {
+            display: block;
+            margin: 20px auto;
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -64,39 +69,17 @@
     </ul>
 </section>
 
-<h2>Business Model Focus Areas</h2>
-<table>
-    <caption>Business Models Selected by Team Members</caption>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>USN</th>
-            <th>Selected Business Models</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Sudarshan K. Naik</td>
-            <td>01FE23BCS221</td>
-            <td>Agriculture, Marketing, Healthcare</td>
-        </tr>
-        <tr>
-            <td>Ayush Bhandari</td>
-            <td>01FE23BCS173</td>
-            <td>Education, Technology, Waste Management</td>
-        </tr>
-        <tr>
-            <td>Vraj Joisar</td>
-            <td>01FE23BCS242</td>
-            <td>Industry, Transportation and Communication</td>
-        </tr>
-        <tr>
-            <td>Rohan Rathod</td>
-            <td>01FE23BCS176</td>
-            <td>Hospitality and Service Management, Wildlife Management</td>
-        </tr>
-    </tbody>
-</table>
+<h2>City Layout Plan</h2>
+<section class="layout-section">
+    <p>The city layout is designed to accommodate various sectors strategically:</p>
+    <ul>
+        <li><strong>Residential Area:</strong> Located in the north to ensure proximity to education and healthcare facilities.</li>
+        <li><strong>Industrial Area:</strong> Positioned in the southeast for efficient logistics with the port.</li>
+        <li><strong>Commercial District:</strong> Centralized to ensure accessibility from all sectors.</li>
+        <li><strong>Port Infrastructure:</strong> Located on the eastern coastline for international trade and commerce.</li>
+        <li><strong>Education & Technology Hub:</strong> Situated near the residential zone for convenience.</li>
+    </ul>
+</section>
 
 <h2>Population Distribution</h2>
 <table>
@@ -151,51 +134,6 @@
     </tbody>
 </table>
 
-<h2>Budget Estimation</h2>
-<table>
-    <caption>Budget Estimation</caption>
-    <thead>
-        <tr>
-            <th>Sector</th>
-            <th>Budget (Crores)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Port Infrastructure</td>
-            <td>8,000</td>
-        </tr>
-        <tr>
-            <td>Residential Area</td>
-            <td>10,000</td>
-        </tr>
-        <tr>
-            <td>Healthcare Sector</td>
-            <td>1,000</td>
-        </tr>
-        <tr>
-            <td>Agricultural Sector</td>
-            <td>1,500</td>
-        </tr>
-        <tr>
-            <td>Transport Infrastructure</td>
-            <td>7,000</td>
-        </tr>
-        <tr>
-            <td>Commercial District</td>
-            <td>4,000</td>
-        </tr>
-        <tr>
-            <td>Industrial Area</td>
-            <td>3,500</td>
-        </tr>
-        <tr>
-            <th>Grand Total</th>
-            <th>84,500</th>
-        </tr>
-    </tbody>
-</table>
-
 <h2>Revenue Model</h2>
 <table>
     <caption>Revenue Model</caption>
@@ -233,23 +171,34 @@
     </tbody>
 </table>
 
+<h2>Revenue Model Pie Chart</h2>
+<section class="chart-section">
+    <canvas id="revenueChart" width="400" height="400"></canvas>
+</section>
+
+<script>
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    const revenueChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Residential Area', 'Healthcare Sector', 'Agricultural Sector', 'Education & Technology Hub', 'Other Sources'],
+            datasets: [{
+                label: 'Revenue (Crores)',
+                data: [23300, 9000, 7800, 21800, 21700],
+                backgroundColor: ['#ff9999', '#66b3ff', '#99ff99', '#ffcc99', '#c2c2f0'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+            },
+        },
+    });
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
