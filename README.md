@@ -1,127 +1,235 @@
-## TECHTOPIA CITY PLAN
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTopia City Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+        table caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
 
-**Team Members:**
+<h1>TECHTOPIA CITY PLAN</h1>
 
-* Sudarshan K. Naik (01FE23BCS221)
-* Ayush Bhandari (01FE23BCS173)
-* Vraj Joisar (01FE23BCS242)
-* Rohan Rathod (01FE23BCS176)
+<h2>City Layout Plan: Area Allocation</h2>
+<table>
+    <caption>Area Allocation</caption>
+    <thead>
+        <tr>
+            <th>Sector</th>
+            <th>Total Area (sq. km)</th>
+            <th>Percentage (%)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Port Infrastructure</td>
+            <td>20</td>
+            <td>1.33%</td>
+        </tr>
+        <tr>
+            <td>Coastal Management</td>
+            <td>30</td>
+            <td>2.00%</td>
+        </tr>
+        <tr>
+            <td>Tourism and Cultural Sites</td>
+            <td>100</td>
+            <td>6.67%</td>
+        </tr>
+        <tr>
+            <td>Public Services (Green Spaces and Parks)</td>
+            <td>35</td>
+            <td>2.33%</td>
+        </tr>
+        <tr>
+            <td>Industrial Area</td>
+            <td>100</td>
+            <td>6.67%</td>
+        </tr>
+        <tr>
+            <td>Business District</td>
+            <td>120</td>
+            <td>8.00%</td>
+        </tr>
+        <tr>
+            <td>Education & Technology Hub</td>
+            <td>30</td>
+            <td>2.00%</td>
+        </tr>
+        <tr>
+            <td>Agricultural Sector</td>
+            <td>500</td>
+            <td>33.33%</td>
+        </tr>
+        <tr>
+            <td>Residential Area</td>
+            <td>400</td>
+            <td>26.67%</td>
+        </tr>
+        <tr>
+            <td>Healthcare Sector</td>
+            <td>50</td>
+            <td>3.33%</td>
+        </tr>
+    </tbody>
+</table>
 
-<dl>
-<dt>Course Name</dt>
-<dd>Design and Analysis of Algorithms</dd>
-<dt>Course Code</dt>
-<dd>24ECSC205</dd>
-<dt>Course Instructor</dt>
-<dd>Prakash Hegde</dd>
-<dt>University</dt>
-<dd>KLE Technological University, Hubballi-31</dd>
-<dt>Portfolio Topic/Domain</dt>
-<dd>City Planning and Development</dd>
-</dl>
+<h2>Population Distribution</h2>
+<table>
+    <caption>Population Distribution</caption>
+    <thead>
+        <tr>
+            <th>Sector</th>
+            <th>Estimated Population</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Residential Area</td>
+            <td>1,200,000</td>
+        </tr>
+        <tr>
+            <td>Industrial Area</td>
+            <td>40,000</td>
+        </tr>
+        <tr>
+            <td>Education & Technology Hub</td>
+            <td>50,000</td>
+        </tr>
+        <tr>
+            <td>Healthcare Sector</td>
+            <td>5,000</td>
+        </tr>
+        <tr>
+            <td>Commercial District</td>
+            <td>415,000</td>
+        </tr>
+        <tr>
+            <td>Port Infrastructure</td>
+            <td>2,500</td>
+        </tr>
+        <tr>
+            <td>Tourism and Cultural Sites</td>
+            <td>5,000</td>
+        </tr>
+        <tr>
+            <td>Coastal Management</td>
+            <td>90,000</td>
+        </tr>
+        <tr>
+            <td>Agricultural Sector</td>
+            <td>5,000</td>
+        </tr>
+        <tr>
+            <td>Total Population</td>
+            <td>3,000,000</td>
+        </tr>
+    </tbody>
+</table>
 
-<br> 
-> A stride towards building a sustainable and balanced city.  
->  
+<h2>Budget Estimation</h2>
+<table>
+    <caption>Budget Estimation</caption>
+    <thead>
+        <tr>
+            <th>Sector</th>
+            <th>Budget (Crores)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Port Infrastructure</td>
+            <td>8,000</td>
+        </tr>
+        <tr>
+            <td>Residential Area</td>
+            <td>10,000</td>
+        </tr>
+        <tr>
+            <td>Healthcare Sector</td>
+            <td>1,000</td>
+        </tr>
+        <tr>
+            <td>Agricultural Sector</td>
+            <td>1,500</td>
+        </tr>
+        <tr>
+            <td>Transport Infrastructure</td>
+            <td>7,000</td>
+        </tr>
+        <tr>
+            <td>Commercial District</td>
+            <td>4,000</td>
+        </tr>
+        <tr>
+            <td>Industrial Area</td>
+            <td>3,500</td>
+        </tr>
+        <tr>
+            <td>Grand Total</td>
+            <td>84,500</td>
+        </tr>
+    </tbody>
+</table>
 
-### Introduction to TECHTOPIA City Plan  
+<h2>Revenue Model</h2>
+<table>
+    <caption>Revenue Model</caption>
+    <thead>
+        <tr>
+            <th>Sector</th>
+            <th>Annual Revenue (Crores)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Residential Area</td>
+            <td>23,300</td>
+        </tr>
+        <tr>
+            <td>Healthcare Sector</td>
+            <td>9,000</td>
+        </tr>
+        <tr>
+            <td>Agricultural Sector</td>
+            <td>7,800</td>
+        </tr>
+        <tr>
+            <td>Education & Technology Hub</td>
+            <td>21,800</td>
+        </tr>
+        <tr>
+            <td>Other Sources</td>
+            <td>21,700</td>
+        </tr>
+        <tr>
+            <td>Total Revenue</td>
+            <td>83,600</td>
+        </tr>
+    </tbody>
+</table>
 
-TechTopia is a meticulously planned, eco-friendly city designed to cater to the needs of a growing population while balancing industrial, residential, and environmental considerations. With a total area of 1,500 sq. km, the city focuses on economic growth, cultural heritage, and sustainability.
-
-### Key Features of TECHTOPIA
-
-1. **Balanced Sector Allocation:**  
-   The city's layout ensures that every sector receives adequate space to fulfill its purpose without encroaching on others.  
-
-2. **Revenue-Centric Model:**  
-   Revenue is generated from various streams like port fees, agriculture, education hubs, and residential areas, ensuring economic self-reliance.
-
-3. **Focus on Sustainability:**  
-   A significant emphasis is placed on green spaces, coastal management, and environmental conservation.
-
-## City Layout Plan: Area Allocation
-
-| Sector                     | Total Area (sq. km) | Percentage (%) |
-|--------------------------------|-------------------------|--------------------|
-| Port Infrastructure        | 20                     | 1.33%             |
-| Coastal Management         | 30                     | 2.00%             |
-| Tourism and Cultural Sites | 100                    | 6.67%             |
-| Public Services (Green Spaces and Parks) | 35           | 2.33%             |
-| Industrial Area            | 100                    | 6.67%             |
-| Business District          | 120                    | 8.00%             |
-| Education & Technology Hub | 30                     | 2.00%             |
-| Agricultural Sector        | 500                    | 33.33%            |
-| Residential Area           | 400                    | 26.67%            |
-| Healthcare Sector          | 50                     | 3.33%             |
-
-**[Insert a detailed city map here, visually representing the sectors and their allocations]**
-
-## Population Distribution
-
-| Sector                     | Estimated Population |
-|--------------------------------|--------------------------|
-| Residential Area           | 1,200,000               |
-| Industrial Area            | 40,000                  |
-| Education & Technology Hub | 50,000                  |
-| Healthcare Sector          | 5,000                   |
-| Commercial District        | 415,000                 |
-| Port Infrastructure        | 2,500                   |
-| Tourism and Cultural Sites | 5,000                   |
-| Coastal Management         | 90,000                  |
-| Agricultural Sector        | 5,000                   |
-| Total Population           | 3,000,000               |
-
-## Budget Estimation
-
-| Sector                     | Budget (Crores) |
-|--------------------------------|---------------------|
-| Port Infrastructure        | 8,000              |
-| Residential Area           | 10,000             |
-| Healthcare Sector          | 1,000              |
-| Agricultural Sector        | 1,500              |
-| Transport Infrastructure   | 7,000              |
-| Commercial District        | 4,000              |
-| Industrial Area            | 3,500              |
-| Grand Total                | 84,500             |
-
-## Revenue Model
-
-| Sector                     | Annual Revenue (Crores) |
-|--------------------------------|-----------------------------|
-| Residential Area           | 23,300                    |
-| Healthcare Sector          | 9,000                     |
-| Agricultural Sector        | 7,800                     |
-| Education & Technology Hub | 21,800                    |
-| Other Sources              | 21,700                    |
-| Total Revenue              | 83,600                    |
-
-### Revenue Sources
-- Port Infrastructure: Port fees, logistics, trade duties.  
-- Residential Area: Property tax, utility charges.  
-- Healthcare Sector: Rental income, hospital/clinic fees, insurance.  
-- Agricultural Sector: Produce sales, allied industries.  
-- Transport Infrastructure: Toll collection, parking fees.  
-- Education & Technology Hub: Tuition fees, services for tech companies.  
-- Other: Tourism and government funding.
-
-## Prominent Goals of TECHTOPIA
-1. **Sustainability:**  
-   Allocate resources efficiently, reduce carbon footprint, and protect natural resources.  
-
-2. **Economic Growth:**  
-   Develop industrial and commercial hubs to generate employment and boost revenue.  
-
-3. **Livability:**  
-   Prioritize green spaces, healthcare, and education to ensure the well-being of residents.  
-
-4. **Innovation Hub:**  
-   Establish educational institutions and tech parks to encourage research and development.  
-
-**Business Model Focus Areas for Team Members:**
-
-| Name | USN | Selected Business Models |
-|---|---|---|
-| Sudarshan K. Naik | 01FE23BCS221 | Agriculture, Marketing, Healthcare |
-| Ayush Bhandari | 01FE23BCS173 | Education, Technology, Waste Management |
-| Vraj Joisar | 01FE23BCS242 | Industry, Transportation and Communication |
-| Rohan Rathod | 01FE23BCS176 | Hospitality and Service Management, Wildlife Management |
+</body>
+</html>
