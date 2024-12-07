@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechTopia City Plan</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(to bottom right, #0047ab, #87ceeb);
@@ -21,32 +22,32 @@
         h1 {
             font-size: 3rem;
             color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
         }
         h2 {
             font-size: 2rem;
             color: #0047ab;
-            background: #ffffff;
+            background-color: #ffffff;
             display: inline-block;
-            padding: 5px 15px;
-            border-radius: 10px;
-            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
         }
         section {
-            margin: 20px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.9);
+            margin: 30px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.85);
             border-radius: 20px;
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
             width: 90%;
-            max-width: 900px;
+            max-width: 1000px;
             color: #0047ab;
         }
         ul, dl {
             list-style: none;
             padding: 0;
-            margin: 10px 0;
+            margin: 20px 0;
         }
         dt {
             font-weight: bold;
@@ -66,20 +67,48 @@
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            font-size: 1rem;
+            padding: 12px 25px;
+            margin-top: 25px;
+            font-size: 1.1rem;
             font-weight: bold;
             color: #ffffff;
             background: #0047ab;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
         }
         .btn:hover {
             background: #ff4500;
             transform: scale(1.1);
+        }
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+        .team-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .team-card h3 {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #0047ab;
+        }
+        .team-card p {
+            font-size: 0.9rem;
+            color: #777;
         }
     </style>
 </head>
@@ -105,27 +134,29 @@
 
 <section>
     <h2>Team Members</h2>
-    <ul>
-        <li>
-            <img src="assets/sudarshan.jpg" alt="Sudarshan K. Naik" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
-            Sudarshan K. Naik (01FE23BCS221)
-        </li>
-        <li>
-            <img src="/css revision/ayush.jpg" alt="Ayush Bhandari" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
-            Ayush Bhandari (01FE23BCS173)
-        </li>
-        <li>
-            <img src="/css revision/vraj.jpg" alt="Vraj Joisar" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
-            Vraj Joisar (01FE23BCS242)
-        </li>
-        <li>
-            <img src="/css revision/rohan.jpg" alt="Rohan Rathod" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
-            Rohan Rathod (01FE23BCS176)
-        </li>
-    </ul>
+    <div class="team-members">
+        <div class="team-card">
+            <img src="assets/sudarshan.jpg" alt="Sudarshan K. Naik">
+            <h3>Sudarshan K. Naik</h3>
+            <p>01FE23BCS221</p>
+        </div>
+        <div class="team-card">
+            <img src="/css revision/ayush.jpg" alt="Ayush Bhandari">
+            <h3>Ayush Bhandari</h3>
+            <p>01FE23BCS173</p>
+        </div>
+        <div class="team-card">
+            <img src="/css revision/vraj.jpg" alt="Vraj Joisar">
+            <h3>Vraj Joisar</h3>
+            <p>01FE23BCS242</p>
+        </div>
+        <div class="team-card">
+            <img src="/css revision/rohan.jpg" alt="Rohan Rathod">
+            <h3>Rohan Rathod</h3>
+            <p>01FE23BCS176</p>
+        </div>
+    </div>
 </section>
-
-    
 
 <section>
     <h2>Selected Business Models</h2>
