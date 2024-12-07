@@ -4,12 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Layout</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to top left, #004d4d, #00cc99);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            width: 90%;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+        caption {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #004d4d;
+        }
+        td {
+            background: #00cc99;
+        }
+    </style>
 </head>
 <body>
 
 <h2>City Layout Plan</h2>
-<section class="layout-section">
+
+<section>
     <p>The city layout is designed to accommodate various sectors strategically:</p>
     <ul>
         <li><strong>Residential Area:</strong> Located in the north to ensure proximity to education and healthcare facilities.</li>
@@ -111,7 +159,7 @@
 </table>
 
 <h2>Revenue Model Pie Chart</h2>
-<section class="chart-section">
+<section>
     <canvas id="revenueChart" width="400" height="400"></canvas>
 </section>
 
