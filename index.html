@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +8,19 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            background-color: #fff;
         }
         table th, table td {
             border: 1px solid #ddd;
@@ -24,12 +33,22 @@
         table caption {
             font-weight: bold;
             margin-bottom: 10px;
+            text-align: center;
         }
-        .info-section, .team-section, .layout-section, .chart-section {
+        .info-section, .team-section, .layout-section, .chart-section, .revenue-section {
             margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .info-section dl, .team-section ul {
+        .info-section dl, .team-section ul, .layout-section ul {
             margin: 10px 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .team-section ul li {
+            margin: 5px 0;
         }
         canvas {
             display: block;
@@ -67,20 +86,19 @@
         <li>Rohan Rathod (01FE23BCS176)</li>
     </ul>
 </section>
-<section>
+
+<section class="team-section">
     <h2>Selected Business Models</h2>
-    <li>Rohan Rathod:1)wildlife managment sector 2)hospitality and service manangement 
-    </li>
-     <li>Vraj Joisar:1)industrial sector 2)trasportation and communication 
-    </li>
-     <li>Ayush Bhandari:1)education sector 2)technological sector 3)waste managment 
-    </li>
-     <li>Sudarshan K. Naik:1)healthcare sector 2)agricultural sector 3)marketing sector 
-    </li>
+    <ul>
+        <li><strong>Rohan Rathod:</strong> Wildlife Management, Hospitality and Service Management</li>
+        <li><strong>Vraj Joisar:</strong> Industrial Sector, Transportation and Communication</li>
+        <li><strong>Ayush Bhandari:</strong> Education, Technological, Waste Management</li>
+        <li><strong>Sudarshan K. Naik:</strong> Healthcare, Agriculture, Marketing</li>
+    </ul>
 </section>
 
-<h2>City Layout Plan</h2>
 <section class="layout-section">
+    <h2>City Layout Plan</h2>
     <p>The city layout is designed to accommodate various sectors strategically:</p>
     <ul>
         <li><strong>Residential Area:</strong> Located in the north to ensure proximity to education and healthcare facilities.</li>
@@ -91,98 +109,51 @@
     </ul>
 </section>
 
-<h2>Population Distribution</h2>
-<table>
-    <caption>Population Distribution</caption>
-    <thead>
-        <tr>
-            <th>Sector</th>
-            <th>Estimated Population</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Residential Area</td>
-            <td>1,200,000</td>
-        </tr>
-        <tr>
-            <td>Industrial Area</td>
-            <td>40,000</td>
-        </tr>
-        <tr>
-            <td>Education & Technology Hub</td>
-            <td>50,000</td>
-        </tr>
-        <tr>
-            <td>Healthcare Sector</td>
-            <td>5,000</td>
-        </tr>
-        <tr>
-            <td>Commercial District</td>
-            <td>415,000</td>
-        </tr>
-        <tr>
-            <td>Port Infrastructure</td>
-            <td>2,500</td>
-        </tr>
-        <tr>
-            <td>Tourism and Cultural Sites</td>
-            <td>5,000</td>
-        </tr>
-        <tr>
-            <td>Coastal Management</td>
-            <td>90,000</td>
-        </tr>
-        <tr>
-            <td>Agricultural Sector</td>
-            <td>5,000</td>
-        </tr>
-        <tr>
-            <th>Total Population</th>
-            <th>3,000,000</th>
-        </tr>
-    </tbody>
-</table>
+<section class="revenue-section">
+    <h2>Population Distribution</h2>
+    <table>
+        <caption>Population Distribution</caption>
+        <thead>
+            <tr>
+                <th>Sector</th>
+                <th>Estimated Population</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Residential Area</td><td>1,200,000</td></tr>
+            <tr><td>Industrial Area</td><td>40,000</td></tr>
+            <tr><td>Education & Technology Hub</td><td>50,000</td></tr>
+            <tr><td>Healthcare Sector</td><td>5,000</td></tr>
+            <tr><td>Commercial District</td><td>415,000</td></tr>
+            <tr><td>Port Infrastructure</td><td>2,500</td></tr>
+            <tr><td>Tourism and Cultural Sites</td><td>5,000</td></tr>
+            <tr><td>Coastal Management</td><td>90,000</td></tr>
+            <tr><td>Agricultural Sector</td><td>5,000</td></tr>
+            <tr><th>Total Population</th><th>3,000,000</th></tr>
+        </tbody>
+    </table>
+</section>
 
-<h2>Revenue Model</h2>
-<table>
-    <caption>Revenue Model</caption>
-    <thead>
-        <tr>
-            <th>Sector</th>
-            <th>Annual Revenue (Crores)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Residential Area</td>
-            <td>23,300</td>
-        </tr>
-        <tr>
-            <td>Healthcare Sector</td>
-            <td>9,000</td>
-        </tr>
-        <tr>
-            <td>Agricultural Sector</td>
-            <td>7,800</td>
-        </tr>
-        <tr>
-            <td>Education & Technology Hub</td>
-            <td>21,800</td>
-        </tr>
-        <tr>
-            <td>Other Sources</td>
-            <td>21,700</td>
-        </tr>
-        <tr>
-            <th>Total Revenue</th>
-            <th>83,600</th>
-        </tr>
-    </tbody>
-</table>
-
-<h2>Revenue Model Pie Chart</h2>
 <section class="chart-section">
+    <h2>Revenue Model</h2>
+    <table>
+        <caption>Revenue Model</caption>
+        <thead>
+            <tr>
+                <th>Sector</th>
+                <th>Annual Revenue (Crores)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Residential Area</td><td>23,300</td></tr>
+            <tr><td>Healthcare Sector</td><td>9,000</td></tr>
+            <tr><td>Agricultural Sector</td><td>7,800</td></tr>
+            <tr><td>Education & Technology Hub</td><td>21,800</td></tr>
+            <tr><td>Other Sources</td><td>21,700</td></tr>
+            <tr><th>Total Revenue</th><th>83,600</th></tr>
+        </tbody>
+    </table>
+
     <canvas id="revenueChart" width="400" height="400"></canvas>
 </section>
 
