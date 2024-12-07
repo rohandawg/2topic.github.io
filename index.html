@@ -1,111 +1,42 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechTopia City Plan</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #000000, #ff0066);
-            color: #ffffff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
-
-        h1, h2 {
-            text-align: center;
-            font-family: 'Arial Black', sans-serif;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-top: 20px;
-        }
-
-        .info-section, .team-section, .layout-section, table, .chart-section {
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
-            width: 90%;
-        }
-
-        dl dt {
-            font-weight: bold;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            padding: 5px 0;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
             text-align: left;
         }
-
+        table th {
+            background-color: #f4f4f4;
+        }
         table caption {
-            font-size: 1.2rem;
+            font-weight: bold;
             margin-bottom: 10px;
-            text-align: center;
         }
-
-        th, td {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        .info-section, .team-section, .chart-section {
+            margin: 20px 0;
         }
-
-        th {
-            background: rgba(255, 0, 102, 0.7);
+        .info-section dl, .team-section ul {
+            margin: 10px 0;
         }
-
-        tbody tr:nth-child(even) {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .chart-section {
-            text-align: center;
-        }
-
-        .chart-section canvas {
-            max-width: 500px;
-            margin: auto;
-        }
-
-        /* Card Style */
-        .info-section, .team-section, .layout-section {
-            position: relative;
-        }
-
-        .info-section::before, .team-section::before, .layout-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #ff0066, #ff66b3);
-            z-index: -1;
-            border-radius: 15px;
-            transform: rotate(-2deg);
-        }
-
-        .team-section::before {
-            transform: rotate(2deg);
-        }
-
-        .layout-section::before {
-            transform: rotate(-3deg);
+        canvas {
+            display: block;
+            margin: 20px auto;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -137,92 +68,18 @@
     </ul>
 </section>
 
-<section class="layout-section">
-    <h2>City Layout Plan</h2>
-    <p>The city layout is designed to accommodate various sectors strategically:</p>
+<section>
+    <h2>Selected Business Models</h2>
     <ul>
-        <li><strong>Residential Area:</strong> Located in the north to ensure proximity to education and healthcare facilities.</li>
-        <li><strong>Industrial Area:</strong> Positioned in the southeast for efficient logistics with the port.</li>
-        <li><strong>Commercial District:</strong> Centralized to ensure accessibility from all sectors.</li>
-        <li><strong>Port Infrastructure:</strong> Located on the eastern coastline for international trade and commerce.</li>
-        <li><strong>Education & Technology Hub:</strong> Situated near the residential zone for convenience.</li>
+        <li>Rohan Rathod: 1) Wildlife Management Sector 2) Hospitality and Service Management</li>
+        <li>Vraj Joisar: 1) Industrial Sector 2) Transportation and Communication</li>
+        <li>Ayush Bhandari: 1) Education Sector 2) Technological Sector 3) Waste Management</li>
+        <li>Sudarshan K. Naik: 1) Healthcare Sector 2) Agricultural Sector 3) Marketing Sector</li>
     </ul>
 </section>
 
-<h2>Population Distribution</h2>
-<section>
-    <table>
-        <caption>Population Distribution</caption>
-        <thead>
-            <tr>
-                <th>Sector</th>
-                <th>Estimated Population</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Residential Area</td><td>1,200,000</td></tr>
-            <tr><td>Industrial Area</td><td>40,000</td></tr>
-            <tr><td>Education & Technology Hub</td><td>50,000</td></tr>
-            <tr><td>Healthcare Sector</td><td>5,000</td></tr>
-            <tr><td>Commercial District</td><td>415,000</td></tr>
-            <tr><td>Port Infrastructure</td><td>2,500</td></tr>
-            <tr><td>Tourism and Cultural Sites</td><td>5,000</td></tr>
-            <tr><td>Coastal Management</td><td>90,000</td></tr>
-            <tr><td>Agricultural Sector</td><td>5,000</td></tr>
-            <tr><th>Total Population</th><th>3,000,000</th></tr>
-        </tbody>
-    </table>
-</section>
-
-<h2>Revenue Model</h2>
-<section>
-    <table>
-        <caption>Revenue Model</caption>
-        <thead>
-            <tr>
-                <th>Sector</th>
-                <th>Annual Revenue (Crores)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>Residential Area</td><td>23,300</td></tr>
-            <tr><td>Healthcare Sector</td><td>9,000</td></tr>
-            <tr><td>Agricultural Sector</td><td>7,800</td></tr>
-            <tr><td>Education & Technology Hub</td><td>21,800</td></tr>
-            <tr><td>Other Sources</td><td>21,700</td></tr>
-            <tr><th>Total Revenue</th><th>83,600</th></tr>
-        </tbody>
-    </table>
-</section>
-
-<h2>Revenue Model Pie Chart</h2>
-<section class="chart-section">
-    <canvas id="revenueChart"></canvas>
-</section>
-
-<script>
-    const ctx = document.getElementById('revenueChart').getContext('2d');
-    const revenueChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Residential Area', 'Healthcare Sector', 'Agricultural Sector', 'Education & Technology Hub', 'Other Sources'],
-            datasets: [{
-                label: 'Revenue (Crores)',
-                data: [23300, 9000, 7800, 21800, 21700],
-                backgroundColor: ['#ff66b3', '#ff3399', '#ff99cc', '#cc6699', '#ff0066'],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                },
-            },
-        },
-    });
-</script>
+<!-- This section will be rendered from layout.html -->
+<div id="city-layout"></div>
 
 </body>
 </html>
