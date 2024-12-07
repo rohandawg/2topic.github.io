@@ -1,95 +1,59 @@
-/* Green and White Theme for TechTopia City Plan */
-
+/* Embedded Custom CSS */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(to bottom, #e8f5e9, #c8e6c9);
-    color: #2e7d32;
-    background-image: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
-    background-repeat: repeat;
-    background-size: contain;
+    background-color: #f8f9fa;
 }
 
 h1, h2 {
     text-align: center;
-    color: #1b5e20;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background: #4caf50;
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block;
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: #388e3c;
-}
-
-section {
-    margin-bottom: 30px;
-    padding: 15px;
-    background: #ffffff;
-    border: 2px solid #66bb6a;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-dl dt {
-    font-weight: bold;
-    color: #2e7d32;
-}
-
-dl dd {
-    margin-left: 15px;
-    color: #388e3c;
-}
-
-ul li {
-    margin: 10px 0;
-    color: #33691e;
+    color: #333;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background: #ffffff;
+    background-color: #fff;
 }
 
 table th, table td {
-    border: 1px solid #66bb6a;
+    border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-    color: #2e7d32;
 }
 
 table th {
-    background-color: #a5d6a7;
-    font-weight: bold;
+    background-color: #f4f4f4;
 }
 
 table caption {
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #1b5e20;
+    text-align: center;
+}
+
+.info-section, .team-section, .layout-section, .chart-section, .revenue-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section dl, .team-section ul, .layout-section ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.team-section ul li {
+    margin: 5px 0;
 }
 
 canvas {
     display: block;
     margin: 20px auto;
-    background: #f1f8e9;
-    border: 2px solid #66bb6a;
-    border-radius: 8px;
 }
