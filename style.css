@@ -1,4 +1,4 @@
-/* Embedded Custom CSS */
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -12,35 +12,63 @@ h1, h2 {
     color: #333;
 }
 
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 table th, table td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 12px 15px;
     text-align: left;
+    font-size: 1rem;
 }
 
 table th {
     background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
 }
 
 table caption {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    font-size: 1.2rem;
 }
 
-.info-section, .team-section, .layout-section, .chart-section, .revenue-section {
+/* Section Styles */
+section {
     margin: 20px 0;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
 }
 
 .info-section dl, .team-section ul, .layout-section ul {
@@ -49,11 +77,92 @@ table caption {
     list-style-type: none;
 }
 
-.team-section ul li {
+.team-section ul li, .layout-section ul li {
     margin: 5px 0;
+    font-size: 1.1rem;
 }
 
+/* Style for Links and Lists */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Chart Section */
 canvas {
     display: block;
     margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Specific Layout Section Styles */
+.layout-section ul {
+    margin-top: 10px;
+}
+
+.layout-section li {
+    font-size: 1rem;
+    color: #333;
+    margin: 8px 0;
+}
+
+.revenue-section table {
+    margin-top: 30px;
+}
+
+/* Custom Button Styles (Optional for Future Use) */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles (Optional for future) */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Custom Layout Improvements */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    canvas {
+        width: 100%;
+    }
 }
