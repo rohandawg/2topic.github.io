@@ -1,1 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Cases and Algorithms</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f9ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 0;
+            border-bottom: 4px solid #007BFF;
+        }
+
+        h2 {
+            color: #ffffff;
+            background-color: #007BFF;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: #0056b3;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        p, ul {
+            margin-left: 20px;
+            font-size: 1rem;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        section {
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            max-width: 1100px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            p, ul {
+                margin-left: 15px;
+                font-size: 0.9rem;
+            }
+
+            section {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Business Cases and Relevant Algorithms</h1>
+
+    <section>
+        <h2>Healthcare Sector: Shortest Path in Emergency Services</h2>
+        <h3>Algorithm: Dijkstra's Algorithm</h3>
+        <p>
+            This algorithm is suitable for finding the shortest route from a hospital to multiple accident spots in a network.
+        </p>
+        <h4>Explanation:</h4>
+        <ul>
+            <li><strong>Dijkstra's Algorithm</strong> uses a greedy approach.</li>
+            <li>It calculates the shortest path from a source node to all other nodes in a graph with non-negative weights.</li>
+        </ul>
+        <h4>C++ Code:</h4>
+        <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;climits&gt;
+using namespace std;
+
+// Dijkstra's Algorithm for Single Source Shortest Path
+void dijkstra(int nodes, vector&lt;pair&lt;int, int&gt;&gt; adj[], int start) {
+    vector&lt;int&gt; dist(nodes, INT_MAX);
+    priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, greater&lt;&gt;&gt; pq;
+
+    dist[start] = 0;
+    pq.push({0, start});
+
+    while (!pq.empty()) {
+        int current_dist = pq.top().first;
+        int current_node = pq.top().second;
+        pq.pop();
+
+        for (auto neighbor : adj[current_node]) {
+            int next_node = neighbor.first;
+            int weight = neighbor.second;
+
+            if (current_dist + weight &lt; dist[next_node]) {
+                dist[next_node] = current_dist + weight;
+                pq.push({dist[next_node], next_node});
+            }
+        }
+    }
+
+    cout &lt;&lt; "Shortest distances from source " &lt;&lt; start &lt;&lt; ":\n";
+    for (int i = 0; i &lt; nodes; ++i) {
+        cout &lt;&lt; "To node " &lt;&lt; i &lt;&lt; " : " &lt;&lt; dist[i] &lt;&lt; endl;
+    }
+}
+
+int main() {
+    int nodes = 5;
+    vector&lt;pair&lt;int, int&gt;&gt; adj[5]; // Adjacency list for the graph
+
+    // Graph edges (node1, node2, weight)
+    adj[0].push_back({1, 2});
+    adj[0].push_back({2, 4});
+    adj[1].push_back({2, 1});
+    adj[1].push_back({3, 7});
+    adj[2].push_back({4, 3});
+    adj[3].push_back({4, 2});
+
+    int start = 0; // Starting node (Hospital)
+    dijkstra(nodes, adj, start);
+
+    return 0;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Agricultural Sector: Cost-Effective Network Design</h2>
+        <h3>Algorithm: Kruskal's Algorithm</h3>
+        <p>
+            This algorithm is ideal for designing a network to connect farms or warehouses with minimum cost.
+        </p>
+        <h4>Explanation:</h4>
+        <ul>
+            <li><strong>Kruskal's Algorithm</strong> creates a Minimum Spanning Tree (MST) by selecting the smallest edges while avoiding cycles.</li>
+            <li>It sorts all edges and uses a <strong>Union-Find</strong> data structure to check for cycles.</li>
+        </ul>
+        <h4>C++ Code:</h4>
+        <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+struct Edge {
+    int src, dest, weight;
+};
+
+// Compare function for sorting edges by weight
+bool compareEdges(Edge a, Edge b) {
+    return a.weight &lt; b.weight;
+}
+
+// Union-Find helper functions
+int findParent(int node, vector&lt;int&gt; &parent) {
+    if (node == parent[node])
+        return node;
+    return parent[node] = findParent(parent[node], parent);
+}
+
+void unionSets(int u, int v, vector&lt;int&gt; &parent, vector&lt;int&gt; &rank) {
+    int rootU = findParent(u, parent);
+    int rootV = findParent(v, parent);
+
+    if (rootU != rootV) {
+        if (rank[rootU] &gt; rank[rootV])
+            parent[rootV] = rootU;
+        else if (rank[rootU] &lt; rank[rootV])
+            parent[rootU] = rootV;
+        else {
+            parent[rootV] = rootU;
+            rank[rootU]++;
+        }
+    }
+}
+
+// Kruskal's Algorithm
+void kruskal(int nodes, vector&lt;Edge&gt; &edges) {
+    sort(edges.begin(), edges.end(), compareEdges);
+
+    vector&lt;int&gt; parent(nodes);
+    vector&lt;int&gt; rank(nodes, 0);
+    for (int i = 0; i &lt; nodes; ++i)
+        parent[i] = i;
+
+    vector&lt;Edge&gt; mst;
+    int mstCost = 0;
+
+    for (Edge &edge : edges) {
+        if (findParent(edge.src, parent) != findParent(edge.dest, parent)) {
+            mst.push_back(edge);
+            mstCost += edge.weight;
+            unionSets(edge.src, edge.dest, parent, rank);
+        }
+    }
+
+    cout &lt;&lt; "Edges in MST:\n";
+    for (Edge &edge : mst) {
+        cout &lt;&lt; edge.src &lt;&lt; " - " &lt;&lt; edge.dest &lt;&lt; " : " &lt;&lt; edge.weight &lt;&lt; endl;
+    }
+    cout &lt;&lt; "Total cost of MST: " &lt;&lt; mstCost &lt;&lt; endl;
+}
+
+int main() {
+    int nodes = 4;
+    vector&lt;Edge&gt; edges = {
+        {0, 1, 10}, {0, 2, 6}, {0, 3, 5}, {1, 3, 15}, {2, 3, 4}};
+
+    kruskal(nodes, edges);
+
+    return 0;
+}
+        </code></pre>
+    </section>
+
+    <footer>
+        ✌🏻🩵✌🏻
+    </footer>
+</body>
+</html>
 
