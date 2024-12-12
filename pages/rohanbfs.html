@@ -1,4 +1,34 @@
-#include <iostream>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS in C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #c7254e;
+            background-color: #f9f2f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BFS Algorithm in C++</h1>
+    <p>The following code demonstrates the implementation of the Breadth-First Search (BFS) algorithm in C++:</p>
+    <pre><code>#include &lt;iostream&gt;
 using namespace std;
 
 void bfs(int m[10][10], int v, int source)
@@ -13,12 +43,12 @@ void bfs(int m[10][10], int v, int source)
     queue[rear] = source;
     visited[source] = 1;
 
-    cout << "The BFS Traversal is... \n";
+    cout &lt;&lt; "The BFS Traversal is... \n";
 
     while (front <= rear)
     {
         u = queue[front];
-        cout << u << "\t";
+        cout &lt;&lt; u &lt;&lt; "\t";
         front++;
 
         for (i = 0; i < v; i++)
@@ -39,10 +69,11 @@ int main()
     int m[10][10] = {{0, 1, 1, 0, 0}, {1, 0, 0, 1, 1}, {1, 0, 0, 0, 1}, {0, 1, 0, 0, 0}, {0, 1, 1, 0, 0}};
 
     int source;
-    cout << "Enter the source vertex: ";
-    cin >> source;
+    cout &lt;&lt; "Enter the source vertex: ";
+    cin &gt;&gt; source;
 
     bfs(m, v, source);
-    9 return 0;
-}
-
+    return 0;
+}</code></pre>
+</body>
+</html>
