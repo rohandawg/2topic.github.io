@@ -4,113 +4,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kruskal Algorithm</title>
-<style>
-    body {
-        background-color: rgb(8, 53, 85);
-        color: #fffdfd;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size:larger;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-    }
+    <title>Logistics and Supply Chain - Kruskal's Algorithm for Optimal Transport Network</title>
+    <style>
+        body {
+            background-color: rgb(113, 115, 141);
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-    h1,
-    h2 {
-        text-decoration: underline;
+        h1,
+        h2 {
+            text-decoration: underline;
+        }
 
-    }
+        h1 {
+            text-align: center;
+            color: #f5f5f5;
+            font-size: 2em;
+            margin-top: 20px;
+        }
 
-    h1 {
-        text-align: center;
-        color: #f5f5f5;
-        font-size: 2em;
-        margin-top: 20px;
-    }
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #203664;
+        }
 
-    h2 {
-        font-size: 2.em;
-        margin-top: 20px;
-        color: #203664;
-    }
+        p,
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
 
-    p,
-    li {
-        font-size: 1.2em;
-        margin: 10px 0;
-    }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
 
-    ul {
-        list-style: disc;
-        margin-left: 20px;
-    }
+        header {
+            background: linear-gradient(90deg, #175b89, #203664);
+            padding: 20px;
+            text-align: center;
+        }
 
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
 
-    header {
-        background: linear-gradient(90deg, #175b89, #203664);
-        padding: 20px;
-        text-align: center;
-    }
+        section {
+            background: #f8f9fa;
+            color: #0a0009;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-    header img {
-        max-width: 100%;
-        height: auto;
-        margin-top: 15px;
-        border-radius: 10px;
-    }
+        footer {
+            text-align: center;
+            background: #282c34;
+            padding: 10px 0;
+            color: #ccc;
+            margin-top: 20px;
+        }
 
+        a {
+            color: #175b89;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    section {
-        background: #466789;
+        a:hover {
+            text-decoration: underline;
+        }
 
-        color: #0a0009;
-
-        margin: 20px auto;
-        padding: 20px;
-        border-radius: 10px;
-        width: 90%;
-        max-width: 800px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    section img {
-        max-width: 100%;
-        height: auto;
-        margin: 15px 0;
-        border-radius: 10px;
-    }
-
-    footer {
-        text-align: center;
-        background: #282c34;
-        padding: 10px 0;
-        color: #392828;
-        margin-top: 20px;
-    }
-</style>
-  
+        .code-block {
+            background-color: #282c34;
+            padding: 15px;
+            border-radius: 8px;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1em;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <pre>
+    <header>
+        <h1>Logistics and Supply Chain - Optimal Transport Network</h1>
+        <p>Designing a minimum-cost network connecting factories, warehouses, and retailers using Kruskal's Algorithm
+        </p>
+    </header>
+
+    <section>
+        <h2>Problem Overview</h2>
+        <p>The objective is to minimize transportation costs in the supply chain by connecting factories, warehouses,
+            and retailers in an efficient network. By representing these entities as nodes and the transportation routes
+            as edges with associated costs, Kruskal's Algorithm will help find the minimum-cost spanning tree for the
+            network.</p>
+        <ul>
+            <li><strong>Nodes:</strong> Factories, Warehouses, Retailers</li>
+            <li><strong>Edges:</strong> Transportation routes with weights as costs/distance</li>
+            <li><strong>Algorithm:</strong> Kruskal's Minimum Spanning Tree Algorithm</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Implementation</h2>
+        <p>To view and execute the C++ code implementing Kruskal's Algorithm for this problem, refer to the following
+            code snippet:</p>
+
+        <div class="code-block">
+            <pre>
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
 
-struct Edge
-{
+struct Edge {
     int u, v, w;
 };
 
-class kruskal
-{
+class kruskal {
 public:
     int n, m, cnt = 0;
     vector&lt;Edge&gt; temp, ans;
     int *arr;
 
-    kruskal()
-    {
+    kruskal() {
         cout &lt;&lt; "Enter no of vertices: ";
         cin &gt;&gt; n;
         cout &lt;&lt; "Enter no. of edges you are entering: ";
@@ -118,31 +147,24 @@ public:
 
         temp.resize(m);
         cout &lt;&lt; "Enter values for u, v, w one by one:\n";
-        for (int i = 0; i &lt; m; i++)
-        {
+        for (int i = 0; i &lt; m; i++) {
             cin &gt;&gt; temp[i].u &gt;&gt; temp[i].v &gt;&gt; temp[i].w;
         }
 
         mergesort(temp);
 
         arr = (int *)malloc(sizeof(int) * n);
-        for (int i = 0; i &lt; n; i++)
-        {
+        for (int i = 0; i &lt; n; i++) {
             arr[i] = i;
         }
     }
 
-    void merge(vector&lt;Edge&gt; &b, vector&lt;Edge&gt; &c, vector&lt;Edge&gt; &a)
-    {
+    void merge(vector&lt;Edge&gt; &b, vector&lt;Edge&gt; &c, vector&lt;Edge&gt; &a) {
         int i = 0, j = 0, k = 0, p = b.size(), q = c.size();
-        while (i &lt; p &amp;&amp; j &lt; q)
-        {
-            if (b[i].w &lt;= c[j].w)
-            {
+        while (i &lt; p &amp;&amp; j &lt; q) {
+            if (b[i].w &lt;= c[j].w) {
                 a[k++] = b[i++];
-            }
-            else
-            {
+            } else {
                 a[k++] = c[j++];
             }
         }
@@ -152,11 +174,9 @@ public:
             a[k++] = c[j++];
     }
 
-    void mergesort(vector&lt;Edge&gt; &a)
-    {
+    void mergesort(vector&lt;Edge&gt; &a) {
         int n = a.size();
-        if (n &gt; 1)
-        {
+        if (n &gt; 1) {
             vector&lt;Edge&gt; b(a.begin(), a.begin() + n / 2);
             vector&lt;Edge&gt; c(a.begin() + n / 2, a.end());
             mergesort(b);
@@ -165,28 +185,22 @@ public:
         }
     }
 
-    void Union(int u, int v)
-    {
+    void Union(int u, int v) {
         int temp1 = arr[u];
-        for (int i = 0; i &lt; n; i++)
-        {
+        for (int i = 0; i &lt; n; i++) {
             if (arr[i] == temp1)
                 arr[i] = arr[v];
         }
     }
 
-    int Find(int u, int v)
-    {
+    int Find(int u, int v) {
         return arr[u] == arr[v];
     }
 
-    void ops()
-    {
+    void ops() {
         int i = 0;
-        while (cnt &lt; n - 1 &amp;&amp; i &lt; m)
-        {
-            if (!Find(temp[i].u, temp[i].v))
-            {
+        while (cnt &lt; n - 1 &amp;&amp; i &lt; m) {
+            if (!Find(temp[i].u, temp[i].v)) {
                 Union(temp[i].u, temp[i].v);
                 ans.push_back(temp[i]);
                 cnt++;
@@ -196,20 +210,24 @@ public:
     }
 };
 
-int main()
-{
+int main() {
     kruskal k;
     k.ops();
 
     cout &lt;&lt; "Edges in the Minimum Spanning Tree:\n";
-    for (auto edge : k.ans)
-    {
+    for (auto edge : k.ans) {
         cout &lt;&lt; edge.u &lt;&lt; " " &lt;&lt; edge.v &lt;&lt; " " &lt;&lt; edge.w &lt;&lt; endl;
     }
 
     return 0;
 }
-    </pre>
+            </pre>
+        </div>
+    </section>
+
+    <footer>
+      
+    </footer>
 </body>
 
 </html>
