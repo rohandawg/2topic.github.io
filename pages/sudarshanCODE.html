@@ -94,75 +94,7 @@
 <body>
     <h1>Business Cases and Relevant Algorithms</h1>
 
-    <section>
-        <h2>Healthcare Sector: Shortest Path in Emergency Services</h2>
-        <h3>Algorithm: Dijkstra's Algorithm</h3>
-        <p>
-            This algorithm is suitable for finding the shortest route from a hospital to multiple accident spots in a network.
-        </p>
-        <h4>Explanation:</h4>
-        <ul>
-            <li><strong>Dijkstra's Algorithm</strong> uses a greedy approach.</li>
-            <li>It calculates the shortest path from a source node to all other nodes in a graph with non-negative weights.</li>
-        </ul>
-        <h4>C++ Code:</h4>
-        <pre><code>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;queue&gt;
-#include &lt;climits&gt;
-using namespace std;
-
-// Dijkstra's Algorithm for Single Source Shortest Path
-void dijkstra(int nodes, vector&lt;pair&lt;int, int&gt;&gt; adj[], int start) {
-    vector&lt;int&gt; dist(nodes, INT_MAX);
-    priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, greater&lt;&gt;&gt; pq;
-
-    dist[start] = 0;
-    pq.push({0, start});
-
-    while (!pq.empty()) {
-        int current_dist = pq.top().first;
-        int current_node = pq.top().second;
-        pq.pop();
-
-        for (auto neighbor : adj[current_node]) {
-            int next_node = neighbor.first;
-            int weight = neighbor.second;
-
-            if (current_dist + weight &lt; dist[next_node]) {
-                dist[next_node] = current_dist + weight;
-                pq.push({dist[next_node], next_node});
-            }
-        }
-    }
-
-    cout &lt;&lt; "Shortest distances from source " &lt;&lt; start &lt;&lt; ":\n";
-    for (int i = 0; i &lt; nodes; ++i) {
-        cout &lt;&lt; "To node " &lt;&lt; i &lt;&lt; " : " &lt;&lt; dist[i] &lt;&lt; endl;
-    }
-}
-
-int main() {
-    int nodes = 5;
-    vector&lt;pair&lt;int, int&gt;&gt; adj[5]; // Adjacency list for the graph
-
-    // Graph edges (node1, node2, weight)
-    adj[0].push_back({1, 2});
-    adj[0].push_back({2, 4});
-    adj[1].push_back({2, 1});
-    adj[1].push_back({3, 7});
-    adj[2].push_back({4, 3});
-    adj[3].push_back({4, 2});
-
-    int start = 0; // Starting node (Hospital)
-    dijkstra(nodes, adj, start);
-
-    return 0;
-}
-        </code></pre>
-    </section>
-
+    
     <section>
         <h2>Agricultural Sector: Cost-Effective Network Design</h2>
         <h3>Algorithm: Kruskal's Algorithm</h3>
@@ -176,79 +108,83 @@ int main() {
         </ul>
         <h4>C++ Code:</h4>
         <pre><code>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;algorithm&gt;
-using namespace std;
-
-struct Edge {
-    int src, dest, weight;
-};
-
-// Compare function for sorting edges by weight
-bool compareEdges(Edge a, Edge b) {
-    return a.weight &lt; b.weight;
-}
-
-// Union-Find helper functions
-int findParent(int node, vector&lt;int&gt; &parent) {
-    if (node == parent[node])
-        return node;
-    return parent[node] = findParent(parent[node], parent);
-}
-
-void unionSets(int u, int v, vector&lt;int&gt; &parent, vector&lt;int&gt; &rank) {
-    int rootU = findParent(u, parent);
-    int rootV = findParent(v, parent);
-
-    if (rootU != rootV) {
-        if (rank[rootU] &gt; rank[rootV])
-            parent[rootV] = rootU;
-        else if (rank[rootU] &lt; rank[rootV])
-            parent[rootU] = rootV;
-        else {
-            parent[rootV] = rootU;
-            rank[rootU]++;
-        }
-    }
-}
-
-// Kruskal's Algorithm
-void kruskal(int nodes, vector&lt;Edge&gt; &edges) {
-    sort(edges.begin(), edges.end(), compareEdges);
-
-    vector&lt;int&gt; parent(nodes);
-    vector&lt;int&gt; rank(nodes, 0);
-    for (int i = 0; i &lt; nodes; ++i)
-        parent[i] = i;
-
-    vector&lt;Edge&gt; mst;
-    int mstCost = 0;
-
-    for (Edge &edge : edges) {
-        if (findParent(edge.src, parent) != findParent(edge.dest, parent)) {
-            mst.push_back(edge);
-            mstCost += edge.weight;
-            unionSets(edge.src, edge.dest, parent, rank);
-        }
-    }
-
-    cout &lt;&lt; "Edges in MST:\n";
-    for (Edge &edge : mst) {
-        cout &lt;&lt; edge.src &lt;&lt; " - " &lt;&lt; edge.dest &lt;&lt; " : " &lt;&lt; edge.weight &lt;&lt; endl;
-    }
-    cout &lt;&lt; "Total cost of MST: " &lt;&lt; mstCost &lt;&lt; endl;
-}
-
-int main() {
-    int nodes = 4;
-    vector&lt;Edge&gt; edges = {
-        {0, 1, 10}, {0, 2, 6}, {0, 3, 5}, {1, 3, 15}, {2, 3, 4}};
-
-    kruskal(nodes, edges);
-
-    return 0;
-}
+            #include <iostream>
+                #include <vector>
+                #include <algorithm>
+                using namespace std;
+                
+                struct Edge {
+                    int u, v, weight;
+                };
+                
+                bool compareEdges(const Edge &e1, const Edge &e2) {
+                    return e1.weight < e2.weight;
+                }
+                
+                class DisjointSet {
+                public:
+                    vector<int> parent, rank;
+                
+                    DisjointSet(int n) {
+                        parent.resize(n);
+                        rank.resize(n, 0);
+                        for (int i = 0; i < n; i++)
+                            parent[i] = i;
+                    }
+                
+                    int find(int x) {
+                        if (parent[x] != x)
+                            parent[x] = find(parent[x]);
+                        return parent[x];
+                    }
+                
+                    void unionSets(int x, int y) {
+                        int rootX = find(x);
+                        int rootY = find(y);
+                        if (rootX != rootY) {
+                            if (rank[rootX] > rank[rootY]) {
+                                parent[rootY] = rootX;
+                            } else if (rank[rootX] < rank[rootY]) {
+                                parent[rootX] = rootY;
+                            } else {
+                                parent[rootY] = rootX;
+                                rank[rootX]++;
+                            }
+                        }
+                    }
+                };
+                
+                vector<Edge> kruskal(int n, vector<Edge> &edges) {
+                    sort(edges.begin(), edges.end(), compareEdges);
+                    DisjointSet ds(n);
+                    vector<Edge> mst;
+                    int ecounter = 0;
+                    for (const Edge &edge : edges) {
+                        if (ecounter == n - 1)
+                            break;
+                        if (ds.find(edge.u) != ds.find(edge.v)) {
+                            mst.push_back(edge);
+                            ds.unionSets(edge.u, edge.v);
+                            ecounter++;
+                        }
+                    }
+                    return mst;
+                }
+                
+                int main() {
+                    int n, m;
+                    cin >> n >> m;
+                    vector<Edge> edges(m);
+                    for (int i = 0; i < m; i++) {
+                        cin >> edges[i].u >> edges[i].v >> edges[i].weight;
+                    }
+                    vector<Edge> mst = kruskal(n, edges);
+                    for (const Edge &edge : mst) {
+                        cout << edge.u << " " << edge.v << " " << edge.weight << endl;
+                    }
+                    return 0;
+                }
+                
         </code></pre>
     </section>
 
@@ -257,4 +193,3 @@ int main() {
     </footer>
 </body>
 </html>
-
