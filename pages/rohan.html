@@ -6,94 +6,129 @@
     <title>SDG Mapped Business Cases</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
             line-height: 1.6;
-            margin: 20px;
         }
-        h1, h2, h3 {
+        h1, h2 {
             color: #2c3e50;
         }
+        h1 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
         ul {
+            list-style-type: square;
             margin: 10px 0;
             padding-left: 20px;
         }
-        li {
-            margin-bottom: 5px;
+        .sdg {
+            margin-top: 15px;
         }
-        .sdg-section {
-            margin-bottom: 30px;
+        .sdg-title {
+            font-weight: bold;
+            color: #e67e22;
+        }
+        .sdg-target {
+            margin-left: 10px;
+            font-style: italic;
+        }
+        .sdg-indicator {
+            margin-left: 20px;
+            color: #2980b9;
         }
     </style>
 </head>
 <body>
     <h1>SDG Mapped Business Cases</h1>
 
-    <div class="sdg-section">
+    <div class="section">
         <h2>1. Wildlife Management Sector</h2>
-        <h3>Key Business Case Goals:</h3>
+        <p><strong>Key Business Case Goals:</strong></p>
         <ul>
             <li>Conservation of biodiversity.</li>
             <li>Sustainable use of natural resources.</li>
             <li>Protection of endangered species and habitats.</li>
         </ul>
-        <h3>Mapped SDG Targets and Indicators:</h3>
-        <h4>SDG 15: Life on Land</h4>
-        <ul>
-            <li><strong>Target 15.1:</strong> Ensure conservation and sustainable use of terrestrial and inland freshwater ecosystems.</li>
+
+        <div class="sdg">
+            <p class="sdg-title">Mapped SDG Targets and Indicators:</p>
+            <p><strong>SDG 15: Life on Land</strong></p>
             <ul>
-                <li><strong>Indicator 15.1.1:</strong> Forest area as a proportion of total land area.</li>
-                <li><strong>Indicator 15.1.2:</strong> Proportion of important sites for terrestrial and freshwater biodiversity that are covered by protected areas.</li>
+                <li class="sdg-target">Target 15.1: Ensure conservation and sustainable use of terrestrial and inland freshwater ecosystems.</li>
+                <ul>
+                    <li class="sdg-indicator">Indicator 15.1.1: Forest area as a proportion of total land area.</li>
+                    <li class="sdg-indicator">Indicator 15.1.2: Proportion of important sites for terrestrial and freshwater biodiversity that are covered by protected areas.</li>
+                </ul>
+                <li class="sdg-target">Target 15.5: Take urgent and significant action to reduce the degradation of natural habitats and halt the loss of biodiversity.</li>
+                <ul>
+                    <li class="sdg-indicator">Indicator 15.5.1: Red List Index (measuring extinction risk trends).</li>
+                </ul>
             </ul>
-            <li><strong>Target 15.5:</strong> Take urgent and significant action to reduce the degradation of natural habitats and halt the loss of biodiversity.</li>
+
+            <p><strong>SDG 13: Climate Action</strong></p>
             <ul>
-                <li><strong>Indicator 15.5.1:</strong> Red List Index (measuring extinction risk trends).</li>
+                <li class="sdg-target">Target 13.1: Strengthen resilience and adaptive capacity to climate-related hazards.</li>
+                <ul>
+                    <li class="sdg-indicator">Indicator 13.1.2: Number of countries with national and local disaster risk reduction strategies.</li>
+                </ul>
             </ul>
-        </ul>
-        <h4>SDG 13: Climate Action</h4>
-        <ul>
-            <li><strong>Target 13.1:</strong> Strengthen resilience and adaptive capacity to climate-related hazards.</li>
-            <ul>
-                <li><strong>Indicator 13.1.2:</strong> Number of countries with national and local disaster risk reduction strategies.</li>
-            </ul>
-        </ul>
+        </div>
     </div>
 
-    <div class="sdg-section">
+    <div class="section">
         <h2>2. Hospitality and Service Management</h2>
-        <h3>Key Business Case Goals:</h3>
+        <p><strong>Key Business Case Goals:</strong></p>
         <ul>
             <li>Promote sustainable tourism.</li>
             <li>Foster economic growth and job creation.</li>
             <li>Improve resource efficiency and reduce waste.</li>
         </ul>
-        <h3>Mapped SDG Targets and Indicators:</h3>
-        <h4>SDG 8: Decent Work and Economic Growth</h4>
-        <ul>
-            <li><strong>Target 8.9:</strong> By 2030, devise and implement policies to promote sustainable tourism that creates jobs and promotes local culture and products.</li>
+
+        <div class="sdg">
+            <p class="sdg-title">Mapped SDG Targets and Indicators:</p>
+            <p><strong>SDG 8: Decent Work and Economic Growth</strong></p>
             <ul>
-                <li><strong>Indicator 8.9.1:</strong> Tourism direct GDP as a proportion of total GDP.</li>
-                <li><strong>Indicator 8.9.2:</strong> Proportion of jobs in sustainable tourism industries out of total tourism jobs.</li>
+                <li class="sdg-target">Target 8.9: By 2030, devise and implement policies to promote sustainable tourism that creates jobs and promotes local culture and products.</li>
+                <ul>
+                    <li class="sdg-indicator">Indicator 8.9.1: Tourism direct GDP as a proportion of total GDP.</li>
+                    <li class="sdg-indicator">Indicator 8.9.2: Proportion of jobs in sustainable tourism industries out of total tourism jobs.</li>
+                </ul>
             </ul>
-        </ul>
-        <h4>SDG 12: Responsible Consumption and Production</h4>
-        <ul>
-            <li><strong>Target 12.3:</strong> Halve per capita global food waste at the retail and consumer levels by 2030.</li>
+
+            <p><strong>SDG 12: Responsible Consumption and Production</strong></p>
             <ul>
-                <li><strong>Indicator 12.3.1:</strong> Food loss index and food waste index.</li>
+                <li class="sdg-target">Target 12.3: Halve per capita global food waste at the retail and consumer levels by 2030.</li>
+                <ul>
+                    <li class="sdg-indicator">Indicator 12.3.1: Food loss index and food waste index.</li>
+                </ul>
+                <li class="sdg-target">Target 12.5: Substantially reduce waste generation through prevention, reduction, recycling, and reuse.</li>
+                <ul>
+                    <li class="sdg-indicator">Indicator 12.5.1: National recycling rate, tons of material recycled.</li>
+                </ul>
             </ul>
-            <li><strong>Target 12.5:</strong> Substantially reduce waste generation through prevention, reduction, recycling, and reuse.</li>
+
+            <p><strong>SDG 11: Sustainable Cities and Communities</strong></p>
             <ul>
-                <li><strong>Indicator 12.5.1:</strong> National recycling rate, tons of material recycled.</li>
+                <li class="sdg-target">Target 11.4: Strengthen efforts to protect and safeguard the world’s cultural and natural heritage.</li>
+                <ul>
+                    <li class="sdg-indicator">Indicator 11.4.1: Total expenditure (public and private) per capita on the preservation, protection, and conservation of all cultural and natural heritage.</li>
+                </ul>
             </ul>
-        </ul>
-        <h4>SDG 11: Sustainable Cities and Communities</h4>
-        <ul>
-            <li><strong>Target 11.4:</strong> Strengthen efforts to protect and safeguard the world’s cultural and natural heritage.</li>
-            <ul>
-                <li><strong>Indicator 11.4.1:</strong> Total expenditure (public and private) per capita on the preservation, protection, and conservation of all cultural and natural heritage.</li>
-            </ul>
-        </ul>
+        </div>
     </div>
 </body>
 </html>
-
