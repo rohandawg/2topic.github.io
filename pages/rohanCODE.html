@@ -1,127 +1,172 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wildlife and Hospitality - Algorithm Applications</title>
+    <title>Algorithm Applications in Wildlife and Hospitality</title>
     <style>
         body {
-            background-color: rgb(113, 115, 141);
-            color: #f5f5f5;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
-
-        h1, h2 {
-            text-decoration: underline;
-        }
-
         h1 {
             text-align: center;
-            color: #f5f5f5;
-            font-size: 2em;
-            margin-top: 20px;
+            color: #2c3e50;
         }
-
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
         h2 {
-            font-size: 2em;
-            margin-top: 20px;
-            color: #203664;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
         }
-
-        p, li {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-
         ul {
-            list-style: disc;
-            margin-left: 20px;
+            list-style-type: square;
+            margin: 10px 0;
+            padding-left: 20px;
         }
-
-        header {
-            background: linear-gradient(90deg, #175b89, #203664);
-            padding: 20px;
-            text-align: center;
-        }
-
-        header img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 15px;
-            border-radius: 10px;
-        }
-
-        section {
-            background: #f8f9fa;
-            color: #0a0009;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 800px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        footer {
-            text-align: center;
-            background: #282c34;
-            padding: 10px 0;
-            color: #ccc;
-            margin-top: 20px;
-        }
-
         a {
-            color: #175b89;
+            color: #2980b9;
             text-decoration: none;
-            font-weight: bold;
         }
-
         a:hover {
             text-decoration: underline;
         }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, "Courier New", monospace;
+            color: #c7254e;
+            background-color: #f9f2f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>Wildlife Management and Hospitality - Algorithm Applications</h1>
-        <p>Applying BFS and DFS algorithms to real-world business cases</p>
-    </header>
+    <h1>Wildlife Management and Hospitality - Algorithm Applications</h1>
 
-    <section>
+    <div class="section">
         <h2>Wildlife Management Sector</h2>
-        <p>Efficiently monitoring and tracking wildlife movement requires exploring various habitats and migration paths. 
-            Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms are ideal for exploring graphs representing 
-            wildlife ecosystems.</p>
+        <p>Efficiently monitoring and tracking wildlife movement requires exploring various habitats and migration paths. Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms are ideal for exploring graphs representing wildlife ecosystems.</p>
         <ul>
             <li><strong>Nodes:</strong> Habitats or key locations within the ecosystem</li>
             <li><strong>Edges:</strong> Possible movement paths between habitats</li>
             <li><strong>Algorithm:</strong> BFS and DFS for exploring these paths</li>
         </ul>
-        
-    </section>
+    </div>
 
-    <section>
+    <div class="section">
         <h2>Hospitality and Service Management</h2>
-        <p>Managing resources in the hospitality sector, such as hotel rooms or event spaces, often involves graph-based 
-            scheduling. BFS and DFS can be used to explore connections and dependencies within service networks.</p>
+        <p>Managing resources in the hospitality sector, such as hotel rooms or event spaces, often involves graph-based scheduling. BFS and DFS can be used to explore connections and dependencies within service networks.</p>
         <ul>
             <li><strong>Nodes:</strong> Service areas, rooms, or resources</li>
             <li><strong>Edges:</strong> Dependencies or transitions between services</li>
             <li><strong>Algorithm:</strong> BFS for level-wise scheduling, DFS for dependency resolution</li>
         </ul>
-        <p>To view and execute the implementation of BFS and DFS algorithms for this problem, refer to the following files:</p>
-        <p><a href="pages/rohanbfs.html" target="_blank">BFS Algorithm Implementation (C++)</a></p>
-        <p><a href="pages/rohandfs.html" target="_blank">DFS Algorithm Implementation (C++)</a></p>
-    </section>
+    </div>
 
-    <footer>
-    </footer>
+    
+
+    <div class="section" id="bfs">
+        <h2>BFS Algorithm Implementation (C++)</h2>
+        <p>The following code demonstrates the implementation of the Breadth-First Search (BFS) algorithm in C++:</p>
+        <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void bfs(int m[10][10], int v, int source)
+{
+    int queue[20];
+    int front = 0, rear = 0, u, i;
+    int visited[10];
+
+    for (i = 0; i < v; i++)
+        visited[i] = 0;
+
+    queue[rear] = source;
+    visited[source] = 1;
+
+    cout &lt;&lt; "The BFS Traversal is... \n";
+
+    while (front <= rear)
+    {
+        u = queue[front];
+        cout &lt;&lt; u &lt;&lt; "\t";
+        front++;
+
+        for (i = 0; i < v; i++)
+        {
+            if (m[u][i] == 1 && visited[i] == 0)
+            {
+                visited[i] = 1;
+                rear++;
+                queue[rear] = i;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int v = 5;
+    int m[10][10] = {{0, 1, 1, 0, 0}, {1, 0, 0, 1, 1}, {1, 0, 0, 0, 1}, {0, 1, 0, 0, 0}, {0, 1, 1, 0, 0}};
+
+    int source;
+    cout &lt;&lt; "Enter the source vertex: ";
+    cin &gt;&gt; source;
+
+    bfs(m, v, source);
+    return 0;
+}</code></pre>
+    </div>
+
+    <div class="section" id="dfs">
+        <h2>DFS Algorithm Implementation (C++)</h2>
+        <p>The following code demonstrates the implementation of the Depth-First Search (DFS) algorithm in C++:</p>
+        <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int v = 5;
+int m[10][10] = {{0, 1, 1, 0, 0}, {1, 0, 0, 1, 1}, {1, 0, 0, 0, 1}, {0, 1, 0, 0, 0}, {0, 1, 1, 0, 0}};
+int visited[10];
+
+void dfs(int m[10][10], int v, int source) {
+    visited[source] = 1;
+    for (int i = 0; i < v; i++) {
+        if (m[source][i] == 1 && visited[i] == 0) {
+            cout &lt;&lt; i &lt;&lt; "\t";
+            dfs(m, v, i);
+        }
+    }
+}
+
+int main() {
+    int source;
+    for (int i = 0; i < v; i++)
+        visited[i] = 0;
+
+    cout &lt;&lt; "Enter the source vertex: ";
+    cin &gt;&gt; source;
+
+    cout &lt;&lt; "The DFS Traversal is... \n";
+    cout &lt;&lt; source &lt;&lt; "\t";
+    dfs(m, v, source);
+
+    return 0;
+}</code></pre>
+    </div>
+
 </body>
-
 </html>
