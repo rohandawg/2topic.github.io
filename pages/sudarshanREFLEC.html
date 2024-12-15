@@ -13,7 +13,6 @@
             margin: 0;
             padding: 0;
         }
-
         h1 {
             text-align: center;
             color: #007BFF;
@@ -22,7 +21,6 @@
             margin: 0;
             border-bottom: 4px solid #007BFF;
         }
-
         h2 {
             color: #ffffff;
             background-color: #007BFF;
@@ -31,22 +29,18 @@
             margin-top: 20px;
             font-size: 1.5rem;
         }
-
         h3 {
             color: #0056b3;
             margin-top: 20px;
             font-size: 1.2rem;
         }
-
         p, ul {
             margin-left: 20px;
             font-size: 1rem;
         }
-
         ul {
             list-style-type: square;
         }
-
         section {
             margin: 40px auto;
             padding: 20px;
@@ -55,11 +49,9 @@
             max-width: 1100px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
         strong {
             color: #333;
         }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -68,22 +60,18 @@
             margin-top: 40px;
             font-size: 0.9rem;
         }
-
         /* Responsive styling */
         @media (max-width: 768px) {
             h2 {
                 font-size: 1.2rem;
             }
-
             h3 {
                 font-size: 1rem;
             }
-
             p, ul {
                 margin-left: 15px;
                 font-size: 0.9rem;
             }
-
             section {
                 margin: 20px;
                 padding: 15px;
@@ -92,99 +80,72 @@
     </style>
 </head>
 <body>
+
     <h1>Learning Outcomes</h1>
 
     <section>
-        <h2>1. Dijkstra’s Algorithm</h2>
+        <h2>Designing and Analyzing Algorithms</h2>
+        <p>Master the art of crafting and evaluating efficient algorithms, guided by principles and techniques that ensure high performance.</p>
+        
+        <h3>1. Algorithmic Problem-Solving Strategies</h3>
         <ul>
-            <li>Understand how to find the shortest path from a source node to all other nodes in a graph with non-negative edge weights.</li>
-            <li>Analyze the time complexity of Dijkstra's Algorithm using adjacency lists and priority queues.</li>
-            <li>Recognize the importance of a greedy approach in solving optimization problems.</li>
+            <li><strong>Recursion:</strong> Break down problems into smaller subproblems that are of the same type, and solve them recursively. Examples include the Fibonacci sequence, Tower of Hanoi, and Tree Traversals.</li>
+            <li><strong>Backtracking:</strong> A trial-and-error approach where you incrementally build a solution, backtracking when a path is found to be invalid. Classic problems include the N-Queens problem, Sudoku solver, and Subset Sum problem.</li>
+            <li><strong>Brute Force:</strong> A straightforward approach where all possible solutions are checked without any optimization. Example: Finding all pairs in an array that sum to a target value.</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>2. Floyd’s Algorithm (Floyd-Warshall Algorithm)</h2>
+        
+        <h3>2. Efficiency in Algorithms</h3>
         <ul>
-            <li>Learn to find the shortest paths between all pairs of vertices in a weighted graph.</li>
-            <li>Understand the dynamic programming approach used in the algorithm.</li>
-            <li>Recognize the trade-offs in terms of time and space complexity (O(V³)) compared to single-source algorithms like Dijkstra.</li>
+            <li><strong>Time Complexity:</strong> Analyze the number of operations or steps an algorithm takes relative to the input size. Common notations include Big-O (for worst case), Big-Ω (for best case), and Big-Θ (for average case).</li>
+            <li><strong>Space Complexity:</strong> Evaluate the amount of memory an algorithm requires during its execution. This is especially important for handling large datasets or constrained environments.</li>
+            <li><strong>Optimization:</strong> Strive for algorithms that minimize both time and space complexity. Efficient algorithms are critical for handling larger datasets in real-world applications.</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>3. Warshall’s Algorithm</h2>
+        
+        <h3>3. Essential Data Structures</h3>
         <ul>
-            <li>Master how to compute the transitive closure of a directed graph.</li>
-            <li>Gain an understanding of how Warshall’s Algorithm can be used to determine reachability between nodes.</li>
+            <li><strong>Trees:</strong> Store hierarchical data in structures like Binary Search Trees (BST) and AVL Trees. These are crucial for efficient searching, insertion, and deletion operations.</li>
+            <li><strong>Graphs:</strong> Use nodes and edges to represent relationships and solve problems related to connectivity, paths, and cycles. Graphs are foundational in areas like networking, social networks, and routing algorithms.</li>
+            <li><strong>Hash Tables:</strong> Store key-value pairs to allow for average constant-time lookups, insertions, and deletions. Hashing is widely used in problems like caching and counting frequencies.</li>
+            <li><strong>Tries:</strong> Specialized tree structures used for fast string search operations, ideal for applications like autocomplete and spell checking.</li>
+            <li><strong>Heaps:</strong> Efficiently implement priority queues with operations like insertion, deletion, and access to the minimum or maximum element in logarithmic time. Example: Dijkstra’s Algorithm.</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>4. Kruskal’s Algorithm</h2>
+        
+        <h3>4. Graph Algorithms</h3>
         <ul>
-            <li>Understand how to find the Minimum Spanning Tree (MST) of a graph using the greedy approach.</li>
-            <li>Learn the importance of sorting edges by weight and using union-find (disjoint-set) to avoid cycles.</li>
-            <li>Compare Kruskal’s Algorithm with Prim’s Algorithm in terms of applicability and complexity.</li>
+            <li><strong>Depth-First Search (DFS):</strong> Explore as deep as possible down one path before backtracking. DFS is useful for problems like topological sorting, detecting cycles, and finding strongly connected components.</li>
+            <li><strong>Breadth-First Search (BFS):</strong> Explore all nodes at the current level before moving deeper. BFS is commonly used for shortest-path algorithms, level-order tree traversal, and finding connected components in a graph.</li>
+            <li><strong>Shortest Path Algorithms:</strong> Find the shortest path between nodes in a graph. Common algorithms include:
+                <ul>
+                    <li><strong>Dijkstra’s Algorithm:</strong> Efficient for graphs with non-negative edge weights.</li>
+                    <li><strong>Bellman-Ford Algorithm:</strong> Can handle graphs with negative edge weights and detect negative weight cycles.</li>
+                    <li><strong>Floyd-Warshall Algorithm:</strong> Computes the shortest paths between all pairs of nodes in a graph.</li>
+                </ul>
+            </li>
+            <li><strong>Minimum Spanning Tree (MST):</strong> Connect all nodes in a graph with the least total weight, using algorithms such as Kruskal’s or Prim’s.</li>
         </ul>
-    </section>
-
-    <section>
-        <h2>5. Prim’s Algorithm</h2>
+        
+        <h3>5. Sorting and Searching</h3>
         <ul>
-            <li>Learn how to construct the MST starting from any arbitrary node.</li>
-            <li>Understand how the priority queue (or heap) optimizes the selection of the next smallest edge.</li>
-            <li>Compare Prim’s Algorithm to Kruskal’s Algorithm for dense and sparse graphs.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>6. Bellman-Ford Algorithm</h2>
-        <ul>
-            <li>Understand how to find the shortest path from a single source to all vertices in a graph, including graphs with negative weight edges.</li>
-            <li>Learn to detect negative weight cycles in a graph.</li>
-            <li>Compare Bellman-Ford with Dijkstra’s Algorithm and understand their use cases.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>7. Boyer-Moore Algorithm</h2>
-        <ul>
-            <li>Gain insights into pattern matching in strings with a focus on how the algorithm skips unnecessary comparisons.</li>
-            <li>Understand the significance of preprocessing the pattern for efficient matching in large texts.</li>
-            <li>Explore how Boyer-Moore improves on brute-force string matching algorithms.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>8. Knuth-Morris-Pratt (KMP) Algorithm</h2>
-        <ul>
-            <li>Learn the importance of preprocessing the pattern to create the "longest prefix-suffix" (LPS) array for skipping redundant comparisons.</li>
-            <li>Understand how KMP achieves linear time complexity for pattern matching.</li>
-            <li>Recognize its application in searching for patterns in DNA sequences, documents, and more.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>9. Depth-First Search (DFS)</h2>
-        <ul>
-            <li>Understand how to traverse or explore a graph using recursion or a stack.</li>
-            <li>Learn to find connected components, solve pathfinding problems, and detect cycles in directed and undirected graphs.</li>
-            <li>Apply DFS in solving puzzles like mazes, generating subsets, or solving backtracking problems.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>10. Breadth-First Search (BFS)</h2>
-        <ul>
-            <li>Master the use of a queue for level-wise exploration of graphs or trees.</li>
-            <li>Learn to find the shortest path in an unweighted graph.</li>
-            <li>Understand BFS's role in finding all nodes at a specific distance from a source, and its use in solving puzzles like "Knight’s Tour."</li>
+            <li><strong>Sorting Algorithms:</strong> Order data efficiently using algorithms like:
+                <ul>
+                    <li><strong>Merge Sort:</strong> A stable, divide-and-conquer algorithm with O(n log n) time complexity.</li>
+                    <li><strong>Quick Sort:</strong> An efficient, comparison-based sort with average O(n log n) time complexity.</li>
+                    <li><strong>Heap Sort:</strong> Builds a heap and sorts in-place with O(n log n) time complexity.</li>
+                </ul>
+            </li>
+            <li><strong>Searching Algorithms:</strong> Retrieve data from collections efficiently:
+                <ul>
+                    <li><strong>Linear Search:</strong> Sequential search with O(n) time complexity, suitable for unsorted data.</li>
+                    <li><strong>Binary Search:</strong> A logarithmic search algorithm for sorted data, with O(log n) time complexity.</li>
+                    <li><strong>Hashing:</strong> Use hash functions to achieve average constant-time lookups for searches.</li>
+                    <li><strong>Trie Search:</strong> Used for prefix-based string searches with optimal time complexity for dictionaries and autocomplete features.</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
     <footer>
-        
     </footer>
+
 </body>
 </html>
