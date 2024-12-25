@@ -108,82 +108,101 @@
         </ul>
         <h4>C++ Code:</h4>
         <pre><code>
-            #include <iostream>
-                #include <vector>
-                #include <algorithm>
-                using namespace std;
-                
-                struct Edge {
-                    int u, v, weight;
-                };
-                
-                bool compareEdges(const Edge &e1, const Edge &e2) {
-                    return e1.weight < e2.weight;
-                }
-                
-                class DisjointSet {
-                public:
-                    vector<int> parent, rank;
-                
-                    DisjointSet(int n) {
-                        parent.resize(n);
-                        rank.resize(n, 0);
-                        for (int i = 0; i < n; i++)
-                            parent[i] = i;
-                    }
-                
-                    int find(int x) {
-                        if (parent[x] != x)
-                            parent[x] = find(parent[x]);
-                        return parent[x];
-                    }
-                
-                    void unionSets(int x, int y) {
-                        int rootX = find(x);
-                        int rootY = find(y);
-                        if (rootX != rootY) {
-                            if (rank[rootX] > rank[rootY]) {
-                                parent[rootY] = rootX;
-                            } else if (rank[rootX] < rank[rootY]) {
-                                parent[rootX] = rootY;
-                            } else {
-                                parent[rootY] = rootX;
-                                rank[rootX]++;
-                            }
-                        }
-                    }
-                };
-                
-                vector<Edge> kruskal(int n, vector<Edge> &edges) {
-                    sort(edges.begin(), edges.end(), compareEdges);
-                    DisjointSet ds(n);
-                    vector<Edge> mst;
-                    int ecounter = 0;
-                    for (const Edge &edge : edges) {
-                        if (ecounter == n - 1)
-                            break;
-                        if (ds.find(edge.u) != ds.find(edge.v)) {
-                            mst.push_back(edge);
-                            ds.unionSets(edge.u, edge.v);
-                            ecounter++;
-                        }
-                    }
-                    return mst;
-                }
-                
-                int main() {
-                    int n, m;
-                    cin >> n >> m;
-                    vector<Edge> edges(m);
-                    for (int i = 0; i < m; i++) {
-                        cin >> edges[i].u >> edges[i].v >> edges[i].weight;
-                    }
-                    vector<Edge> mst = kruskal(n, edges);
-                    for (const Edge &edge : mst) {
-                        cout << edge.u << " " << edge.v << " " << edge.weight << endl;
-                    }
-                    return 0;
-                }
+            #include <bits/stdc++.h>
+using namespace std;
+
+struct Edge {
+    int u, v, w;
+};
+
+class kruskal {
+public:
+    int n, m, cnt = 0;
+    vector<Edge> temp, ans;
+    int *arr;
+
+    kruskal() {
+        cout << "Enter no of vertices: ";
+        cin >> n;
+        cout << "Enter no. of edges you are entering: ";
+        cin >> m;
+
+        temp.resize(m);
+        cout << "Enter values for u, v, w one by one:\n";
+        for (int i = 0; i < m; i++) {
+            cin >> temp[i].u >> temp[i].v >> temp[i].w;
+        }
+
+        mergesort(temp);
+
+        arr = (int *)malloc(sizeof(int) * n);
+        for (int i = 0; i < n; i++) {
+            arr[i] = i;
+        }
+    }
+
+    void merge(vector<Edge> &b, vector<Edge> &c, vector<Edge> &a) {
+        int i = 0, j = 0, k = 0, p = b.size(), q = c.size();
+        while (i < p && j < q) {
+            if (b[i].w <= c[j].w) {
+                a[k++] = b[i++];
+            } else {
+                a[k++] = c[j++];
+            }
+        }
+        while (i < p)
+            a[k++] = b[i++];
+        while (j < q)
+            a[k++] = c[j++];
+    }
+
+    void mergesort(vector<Edge> &a) {
+        int n = a.size();
+        if (n > 1) {
+            vector<Edge> b(a.begin(), a.begin() + n / 2);
+            vector<Edge> c(a.begin() + n / 2, a.end());
+            mergesort(b);
+            mergesort(c);
+            merge(b, c, a);
+        }
+    }
+
+    void Union(int u, int v) {
+        int temp1 = arr[u];
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == temp1)
+                arr[i] = arr[v];
+        }
+    }
+
+    int Find(int u, int v) {
+        return arr[u] == arr[v];
+    }
+
+    void ops() {
+        int i = 0;
+        while (cnt < n - 1 && i < m) {
+            if (!Find(temp[i].u, temp[i].v)) {
+                Union(temp[i].u, temp[i].v);
+                ans.push_back(temp[i]);
+                cnt++;
+            }
+            i++;
+        }
+    }
+};
+
+int main() {
+    kruskal k;
+    k.ops();
+
+    cout << "Edges in the Minimum Spanning Tree:\n";
+    for (auto edge : k.ans) {
+        cout << edge.u << " " << edge.v << " " << edge.w << endl;
+    }
+
+    return 0;
+}
                 
         </code></pre>
     </section>
