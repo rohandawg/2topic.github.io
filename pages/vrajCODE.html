@@ -3,186 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorithms</title>
+    <title>Algorithms in Different Sectors</title>
     <style>
-        /* General reset */
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #FFFFFF;
         }
-
-        body {
+        header {
+            background-color: #333;
             padding: 20px;
-            line-height: 1.6;
-        }
-
-        h1 {
-            color: #FFA726;
             text-align: center;
+            color: #ffffff;
         }
-
-        h2 {
-            color: #66BB6A;
-            text-align: center;
+        main {
+            padding: 20px;
         }
-
-        p {
-            color: #E0E0E0;
-            text-align: center;
+        section {
+            margin-bottom: 40px;
         }
-
-        table {
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 18px;
-            text-align: center;
-            width: 100%;
+        h1, h2, h3 {
+            color: #61dafb;
         }
-
-        th, td {
-            border: 1px solid #444;
+        .algorithm {
+            margin: 10px 0;
             padding: 10px;
+            background-color: #252526;
+            border-left: 5px solid #61dafb;
         }
-
-        th {
-            background-color: #1E1E1E;
-            color: #FFA726;
-        }
-
-        td {
-            background-color: #2E2E2E;
-        }
-
-        /* Scrollbar styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #555;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #777;
-        }
-
-        ::-webkit-scrollbar-track {
-            background-color: #1E1E1E;
+        .algorithm-title {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1>Floyd-Warshall & QuickSort Algorithms</h1>
+    <header>
+        <h1>Making Work Easier with Algorithms</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Industrial Sector</h2>
+            <h3>Improving Workflows with Algorithms</h3>
+            <div class="algorithm">
+                <div class="algorithm-title">1. Organizing Production Tasks</div>
+                <p><strong>Algorithm Used:</strong> Bubble Sort<br>Bubble Sort helps arrange production tasks in the right order, reducing delays and making work smoother.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/BubbleSort.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">2. Managing Resources</div>
+                <p><strong>Algorithm Used:</strong> Selection Sort<br>Selection Sort helps in giving materials and tools to the right tasks based on priority.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/SelectionSort.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">3. Keeping Inventory Updated</div>
+                <p><strong>Algorithm Used:</strong> Insertion Sort<br>Insertion Sort keeps inventory records updated as new items are added, ensuring everything is in order.</p>
+           
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/InsertionSort.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">4. Scheduling Maintenance</div>
+                <p><strong>Algorithm Used:</strong> Heap Sort<br>Heap Sort helps plan machine maintenance to avoid breakdowns and keep things running.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/HeapSort.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">5. Combining Production Data</div>
+                <p><strong>Algorithm Used:</strong> Merge Sort<br>Merge Sort combines data from different production lines to give clear insights for better planning.</p>
+           
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/Merge.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">6. Sorting Defective Items</div>
+                <p><strong>Algorithm Used:</strong> Quick Sort<br>Quick Sort helps quickly find and group defective items for faster fixing.</p>
+           
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/Quick.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">7. Matching Tasks to Skills</div>
+                <p><strong>Algorithm Used:</strong> Trie<br>Trie structures make it easy to match workers' skills to the tasks they can do best.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/Trie.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">8. Finding Best Supply Routes</div>
+                <p><strong>Algorithm Used:</strong> Dijkstra's Algorithm<br>Dijkstra’s Algorithm finds the shortest and most cost-effective routes for supply chains.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/Dijkstra.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">9. Planning Distribution Networks</div>
+                <p><strong>Algorithm Used:</strong> Floyd-Warshall Algorithm<br>Floyd-Warshall helps design the best paths for delivering goods.</p>
+           
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/FloydWarshall.cpp">code implementation</a>
+            </div>
+        </section>
 
-    <h2>Quick Sort</h2>
-    <p>Quick Sort: Used in cases where speed is critical, and large datasets need to be processed quickly, such as in sorting delivery routes or managing inventory in real time.Also knew this code well so wanted to implement it.</p>
-
-    <pre>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-using namespace std;
-
-int Partition(vector&lt;int&gt;& A, int l, int r) 
-{
-    int pivot = A[l];
-    int i = l;   
-    int j = r + 1;
-
-    while (true) 
-    {
-        do {
-            i++;
-        } while (i &lt;= r && A[i] &lt; pivot);
-
-        do {
-            j--;
-        } while (A[j] &gt; pivot);
-
-        if (i &gt;= j) break;
-        swap(A[i], A[j]);
-    }
-    swap(A[l], A[j]);
-    return j; 
-}
-
-void QuickSort(vector&lt;int&gt;& A, int l, int r) 
-{
-    if (l &lt; r) 
-    {
-        int s = Partition(A, l, r);  
-        QuickSort(A, l, s - 1);      
-        QuickSort(A, s + 1, r);     
-    }
-}
-
-int main() 
-{
-    return 0;
-}
-    </pre>
-
-    <h2>Floyd-Warshall Algorithm</h2>
-    <p>Floyd-Warshall Algorithm is useful for transportation systems, especially when calculating the shortest paths between multiple locations. It helps in finding the most efficient routes for vehicles or goods, minimizing travel times, and reducing costs. It can be applied to a variety of transportation scenarios such as public transit, logistics, and network routing.Also sir won't lie i did use some GPT for some part this code.</p>
-
-    <pre>
-#include &lt;iostream&gt;
-#include &lt;limits&gt;
-
-using namespace std;
-
-void floydWarshall(int graph[][4], int v) 
-{    
-    int n = numeric_limits&lt;int&gt;::max();  
-    int dist[4][4];
-    
-    for (int i = 0; i &lt; v; ++i) 
-    {
-        for (int j = 0; j &lt; v; ++j) 
-        {
-            dist[i][j] = graph[i][j];
-        }
-    }
-
-    for (int k = 0; k &lt; v; ++k) 
-    {
-        for (int i = 0; i &lt; v; ++i) 
-        {
-            for (int j = 0; j &lt; v; ++j) 
-            {
-                if (dist[i][k] != n && dist[k][j] != n && dist[i][k] + dist[k][j] &lt; dist[i][j]) 
-                {
-                    dist[i][j] = dist[i][k] + dist[k][j];
-                }
-            }
-        }
-    }
-
-    for (int i = 0; i &lt; v; ++i) 
-    {
-        for (int j = 0; j &lt; v; ++j) 
-        {
-            if (dist[i][j] == n)
-            {
-                cout &lt;&lt; "INF " ;
-            }
-            else
-            {
-                cout &lt;&lt; dist[i][j] &lt;&lt; " ";
-            }
-        }
-        cout &lt;&lt; endl;
-    }
-}
-
-int main() 
-{
-    return 0;
-}
-    </pre>
+        <section>
+            <h2>Transportation and Communication Sector</h2>
+            <h3>Making Travel and Communication Smarter with Algorithms</h3>
+            <div class="algorithm">
+                <div class="algorithm-title">1. Handling Traffic Data</div>
+                <p><strong>Algorithm Used:</strong> Bubble Sort<br>Bubble Sort organizes traffic data to spot congested areas and improve traffic flow.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/BubbleSort.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">2. Choosing Important Routes</div>
+                <p><strong>Algorithm Used:</strong> Selection Sort<br>Selection Sort picks routes that need attention first, based on traffic or urgency.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/SelectionSort.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">3. Managing Vehicle Fleets</div>
+                <p><strong>Algorithm Used:</strong> Heap Sort<br>Heap Sort helps schedule vehicles efficiently to get the most out of them.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/HeapSort.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">4. Combining Traffic Data</div>
+                <p><strong>Algorithm Used:</strong> Merge Sort<br>Merge Sort merges traffic data from different sources for a complete view.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/Merge.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">5. Handling Transport Requests</div>
+                <p><strong>Algorithm Used:</strong> Quick Sort<br>Quick Sort organizes transport requests quickly, improving service.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/Quick.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">6. Looking Up Addresses</div>
+                <p><strong>Algorithm Used:</strong> Trie<br>Trie structures make finding addresses in navigation systems fast and easy.</p>
+           
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/Trie.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">7. Finding the Best Routes</div>
+                <p><strong>Algorithm Used:</strong> Dijkstra's Algorithm<br>Dijkstra’s Algorithm calculates the quickest and easiest routes for travel.</p>
+            
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/Dijkstra.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">8. Designing Communication Systems</div>
+                <p><strong>Algorithm Used:</strong> Prim's Algorithm<br>Prim’s Algorithm builds cost-effective and reliable communication networks.</p>
+          
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/prim.cpp">code implementation</a>
+            </div>
+          
+            <div class="algorithm">
+                <div class="algorithm-title">9. Spotting Traffic Patterns</div>
+                <p><strong>Algorithm Used:</strong> KMP Algorithm<br>The KMP Algorithm finds repeating patterns in traffic data, helping improve systems.</p>
+          
+            <a href="https://github.com/rohandawg/2topic.github.io/blob/main/vraj/KMP.cpp">code implementation</a>
+            </div>
+          
+        </section>
+    </main>
 </body>
 </html>
