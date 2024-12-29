@@ -1,53 +1,57 @@
 #include <iostream>
-#include <vector>
-#include <climits>
+#include <limits>
 
 using namespace std;
 
-void floydWarshall(vector<vector<int>>& W, int n) {
-    vector<vector<int>> D = W;
+void floydWarshall(int graph[][n], int v) 
+{    
+    int n = numeric_limits<int>::max();  
+    int dist[n][n];
+    
+    for (int i = 0; i < v; ++i) 
+    {
+        for (int j = 0; j < v; ++j) 
+        {
+            dist[i][j] = graph[i][j];
+        }
+    }
 
-    for (int k = 0; k < n; ++k) {
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (D[i][k] != INT_MAX && D[k][j] != INT_MAX) {
-                    D[i][j] = min(D[i][j], D[i][k] + D[k][j]);
+    for (int k = 0; k < v; ++k) 
+    {
+        for (int i = 0; i < v; ++i) 
+        {
+            for (int j = 0; j < v; ++j) 
+            {
+                if (dist[i][k] != n && dist[k][j] != n && dist[i][k] + dist[k][j] < dist[i][j]) 
+                {
+                    dist[i][j] = dist[i][k] + dist[k][j];
                 }
             }
         }
     }
 
-    cout << "Shortest distances between every pair of vertices: \n";
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if (D[i][j] == INT_MAX) {
+    for (int i = 0; i < v; ++i) 
+    {
+        for (int j = 0; j < v; ++j) 
+        {
+            if (dist[i][j] == n)
+            {
                 cout << "INF ";
-            } else {
-                cout << D[i][j] << " ";
+            }
+            else
+            {
+                cout << dist[i][j] << " ";
             }
         }
         cout << endl;
     }
 }
 
-int main() {
+int main() 
+{
     int n;
-    cout << "Enter the number of vertices: ";
-    cin >> n;
-
-    vector<vector<int>> W(n, vector<int>(n));
-
-    cout << "Enter the weight matrix (use a large number for infinity): \n";
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            cin >> W[i][j];
-            if (W[i][j] == 0 && i != j) {
-                W[i][j] = INT_MAX;
-            }
-        }
-    }
-
-    floydWarshall(W, n);
-
+    cin>>n;
+    int graph[n][n];
+    floydWarshall(graph, n) ;
     return 0;
 }
