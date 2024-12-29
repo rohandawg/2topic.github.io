@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Cases and Algorithms</title>
+    <title>Algorithm Applications</title>
     <style>
         /* Global styles */
         body {
@@ -91,124 +92,96 @@
         }
     </style>
 </head>
+
 <body>
-    <h1>Business Cases and Relevant Algorithms</h1>
+    <h1>Algorithm Applications</h1>
 
-    
     <section>
-        <h2>Agricultural Sector: Cost-Effective Network Design</h2>
-        <h3>Algorithm: Kruskal's Algorithm</h3>
-        <p>
-            This algorithm is ideal for designing a network to connect farms or warehouses with minimum cost.
-        </p>
-        <h4>Explanation:</h4>
-        <ul>
-            <li><strong>Kruskal's Algorithm</strong> creates a Minimum Spanning Tree (MST) by selecting the smallest edges while avoiding cycles.</li>
-            <li>It sorts all edges and uses a <strong>Union-Find</strong> data structure to check for cycles.</li>
-        </ul>
-        <h4>C++ Code:</h4>
-        <pre><code>
-            #include <bits/stdc++.h>
-using namespace std;
+        <h2>Healthcare Sector</h2>
+        <h3>Optimal Ambulance Routing</h3>
+        <p><strong>Algorithm:</strong> Dijkstra’s Algorithm</p>
+        <p><strong>Application:</strong> Finds the shortest path from an accident site to the nearest hospital.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-struct Edge {
-    int u, v, w;
-};
+        <h3>Minimizing Medical Facility Connection Costs</h3>
+        <p><strong>Algorithm:</strong> Prim’s Algorithm</p>
+        <p><strong>Application:</strong> Constructs a minimum cost network to connect all hospitals in a region.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-class kruskal {
-public:
-    int n, m, cnt = 0;
-    vector<Edge> temp, ans;
-    int *arr;
+        <h3>Evaluating Emergency Transport Time</h3>
+        <p><strong>Algorithm:</strong> Floyd-Warshall Algorithm</p>
+        <p><strong>Application:</strong> Computes the shortest transport time between every pair of hospitals.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-    kruskal() {
-        cout << "Enter no of vertices: ";
-        cin >> n;
-        cout << "Enter no. of edges you are entering: ";
-        cin >> m;
+        <h3>Disease Name Search in Reports</h3>
+        <p><strong>Algorithm:</strong> Knuth-Morris-Pratt (KMP) Algorithm</p>
+        <p><strong>Application:</strong> Efficiently matches and identifies disease names in large medical text data.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-        temp.resize(m);
-        cout << "Enter values for u, v, w one by one:\n";
-        for (int i = 0; i < m; i++) {
-            cin >> temp[i].u >> temp[i].v >> temp[i].w;
-        }
+        <h3>Genetic Pattern Detection</h3>
+        <p><strong>Algorithm:</strong> Rabin-Karp Algorithm</p>
+        <p><strong>Application:</strong> Detects specific DNA sequences within genetic data for disease research.</p>
+        <a href="">CODE IMPLEMENTATION</a>
+    </section>
 
-        mergesort(temp);
+    <section>
+        <h2>Agricultural Sector</h2>
+        <h3>Shortest Route for Delivering Fertilizers</h3>
+        <p><strong>Algorithm:</strong> Bellman-Ford Algorithm</p>
+        <p><strong>Application:</strong> Finds the shortest paths from a central warehouse to farms, handling negative weights like discounts on specific routes.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-        arr = (int *)malloc(sizeof(int) * n);
-        for (int i = 0; i < n; i++) {
-            arr[i] = i;
-        }
-    }
+        <h3>Efficient Irrigation Network Design</h3>
+        <p><strong>Algorithm:</strong> Kruskal’s Algorithm</p>
+        <p><strong>Application:</strong> Constructs a minimum spanning tree to efficiently distribute water.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-    void merge(vector<Edge> &b, vector<Edge> &c, vector<Edge> &a) {
-        int i = 0, j = 0, k = 0, p = b.size(), q = c.size();
-        while (i < p && j < q) {
-            if (b[i].w <= c[j].w) {
-                a[k++] = b[i++];
-            } else {
-                a[k++] = c[j++];
-            }
-        }
-        while (i < p)
-            a[k++] = b[i++];
-        while (j < q)
-            a[k++] = c[j++];
-    }
+        <h3>Mapping Communication Paths Between Farms</h3>
+        <p><strong>Algorithm:</strong> BFS (Breadth-First Search)</p>
+        <p><strong>Application:</strong> Explores and maps the shortest unweighted paths for communication between farm clusters.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-    void mergesort(vector<Edge> &a) {
-        int n = a.size();
-        if (n > 1) {
-            vector<Edge> b(a.begin(), a.begin() + n / 2);
-            vector<Edge> c(a.begin() + n / 2, a.end());
-            mergesort(b);
-            mergesort(c);
-            merge(b, c, a);
-        }
-    }
+        <h3>Analyzing Patterns in Soil Health Data</h3>
+        <p><strong>Algorithm:</strong> Rabin-Karp Algorithm</p>
+        <p><strong>Application:</strong> Detects specific patterns or substrings in soil health metrics over large datasets.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-    void Union(int u, int v) {
-        int temp1 = arr[u];
-        for (int i = 0; i < n; i++) {
-            if (arr[i] == temp1)
-                arr[i] = arr[v];
-        }
-    }
+        <h3>Crop Rotation Planning</h3>
+        <p><strong>Algorithm:</strong> DFS (Depth-First Search)</p>
+        <p><strong>Application:</strong> Traverses dependency graphs to evaluate optimal crop rotations.</p>
+        <a href="">CODE IMPLEMENTATION</a>
+    </section>
 
-    int Find(int u, int v) {
-        return arr[u] == arr[v];
-    }
+    <section>
+        <h2>Marketing Sector</h2>
+        <h3>Efficient Keyword Search in Feedback Data</h3>
+        <p><strong>Algorithm:</strong> Knuth-Morris-Pratt (KMP) Algorithm</p>
+        <p><strong>Application:</strong> Finds keywords in consumer feedback datasets for targeted marketing.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-    void ops() {
-        int i = 0;
-        while (cnt < n - 1 && i < m) {
-            if (!Find(temp[i].u, temp[i].v)) {
-                Union(temp[i].u, temp[i].v);
-                ans.push_back(temp[i]);
-                cnt++;
-            }
-            i++;
-        }
-    }
-};
+        <h3>Optimizing Campaign Reach Between Cities</h3>
+        <p><strong>Algorithm:</strong> Prim’s Algorithm</p>
+        <p><strong>Application:</strong> Builds a minimum cost network to maximize campaign reach.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-int main() {
-    kruskal k;
-    k.ops();
+        <h3>Shortest Path to Deliver Marketing Material</h3>
+        <p><strong>Algorithm:</strong> Dijkstra’s Algorithm</p>
+        <p><strong>Application:</strong> Finds optimal delivery routes to minimize travel costs and time.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-    cout << "Edges in the Minimum Spanning Tree:\n";
-    for (auto edge : k.ans) {
-        cout << edge.u << " " << edge.v << " " << edge.w << endl;
-    }
+        <h3>Predicting Customer Sentiment Trends</h3>
+        <p><strong>Algorithm:</strong> Floyd-Warshall Algorithm</p>
+        <p><strong>Application:</strong> Analyzes and predicts shortest paths in customer interaction networks.</p>
+        <a href="">CODE IMPLEMENTATION</a>
 
-    return 0;
-}
-                
-        </code></pre>
+        <h3>Matching Customer Reviews to Campaign Goals</h3>
+        <p><strong>Algorithm:</strong> Rabin-Karp Algorithm</p>
+        <p><strong>Application:</strong> Identifies matches between marketing goals and specific phrases in customer reviews.</p>
+        <a href="">CODE IMPLEMENTATION</a>
     </section>
 
     <footer>
-        ✌🏻🩵✌🏻
     </footer>
 </body>
+
 </html>
